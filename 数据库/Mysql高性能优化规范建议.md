@@ -110,7 +110,7 @@ Mysql内存临时表不支持TEXT、BLOB这样的大数据类型，如果查询�
 
 ##### **2、TEXT或BLOB类型只能使用前缀索引**
 
-因为[MySQL](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==&mid=2247487885&idx=1&sn=65b1bf5f7d4505502620179669a9c2df&chksm=ebd62ea1dca1a7b7bf884bcd9d538d78ba064ee03c09436ca8e57873b1d98a55afd6d7884cfc&scene=21#wechat_redirect)对索引字段长度是有限制的，所以TEXT类型只能使用前缀索引，并且TEXT列上是不能有默认值的
+因为[MySQL](https://gitlab.com/superxzl/way-api/wikis/数据库/项目中常用的19条MySQL优化)对索引字段长度是有限制的，所以TEXT类型只能使用前缀索引，并且TEXT列上是不能有默认值的
 
 #### 3. 避免使用ENUM类型
 
@@ -191,7 +191,7 @@ Innodb是按照主键索引的顺序来组织表的
 
 ## 如何选择索引列的顺序
 
-建立[索引](http://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==&mid=2247485618&idx=1&sn=ed892f572b81e6aa6a7be5c43c2e7351&chksm=ebd6379edca1be88f7d3703db31115ced7c5cacd814b684731d6bc1f66f547f341b6c6451da4&scene=21#wechat_redirect)的目的是：希望通过索引进行数据查找，减少随机IO，增加查询性能 ，索引能过滤出越少的数据，则从磁盘中读入的数据也就越少。
+建立[索引](https://gitlab.com/superxzl/way-api/wikis/数据库/MySQL索引优化分析)的目的是：希望通过索引进行数据查找，减少随机IO，增加查询性能 ，索引能过滤出越少的数据，则从磁盘中读入的数据也就越少。
 
 - 区分度最高的放在联合索引的最左侧（区分度=列中不同值的数量/列的总行数）
 - 尽量把字段长度小的列放在联合索引的最左侧（因为字段长度越小，一页能存储的数据量越大，IO性能也就越好）
