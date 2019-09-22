@@ -5,5 +5,6 @@
 ## 插件
 * gliffy，支持画各种图功能。
 * markdown，支持md功能。
+* easymind，支持脑图功能。
 
 注：[破解提供](https://zhile.io/2018/12/20/atlassian-license-crack.html)还提供JetBrain的产品破解
