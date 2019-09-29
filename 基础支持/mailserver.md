@@ -98,3 +98,5 @@ Sep 29 06:40:04 mail postfix/anvil[2259]: statistics: max cache size 1 at Sep 29
 Sep 29 06:40:44 mail postfix/smtpd[2739]: timeout after END-OF-MESSAGE from localhost[127.0.0.1]
 Sep 29 06:40:44 mail postfix/smtpd[2739]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 commands=4
 ```
+## 参考文献
+1. [利用Docker自建多功能加密邮件服务器](https://www.itmanbu.com/docker-mail-server.html)
