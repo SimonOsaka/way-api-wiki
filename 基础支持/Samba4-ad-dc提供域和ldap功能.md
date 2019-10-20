@@ -28,6 +28,7 @@ nameserver 192.168.3.37 #本机ip
 
 * 所有机器保持在同一网段`192.168.3.0`，子网掩码`255.255.255.0`，网关`192.168.3.1`
 * samba4机器的DNS设置为本机ip`192.168.3.37`
+* 使用命令`systemctl start samba`后，查看`systemctl status samba`是否成功，如果log提示`dns update fail`执行`systemctl restart samba`就行。
 
 ## 参考文献
 1. [Samba4官网](https://www.samba.org)提供文件共享、域和ldap管理。
