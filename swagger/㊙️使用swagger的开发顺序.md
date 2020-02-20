@@ -40,6 +40,10 @@ docker run -p 8080:8080 -e URLS="[{ name: \"one\", url: \"/foo/swagger_1.json\"}
 4. 浏览器访问api内的任意接口，json格式文件内的mock数据都将response。
 5. mock结束
 
+
+
+==如果要使用随机mock数据，请看*`swagger-mock随机数据代码`*这篇文章==
+
 *postman支持导入swagger api的yaml进行测试。*
 
 
@@ -47,6 +51,7 @@ docker run -p 8080:8080 -e URLS="[{ name: \"one\", url: \"/foo/swagger_1.json\"}
 ##### 参考文献
 
 * https://www.jianshu.com/p/879baf1cff07
+* https://github.com/Pmovil/docker-swagger-ide
 
 
 
