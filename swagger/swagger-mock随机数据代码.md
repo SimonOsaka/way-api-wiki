@@ -258,5 +258,6 @@ function setContentType(req, res, supported, excluded) {
 
 2. type如果没有在yaml写，是不能决定mock什么类型的数据。
 
-3. array结果数据，只有第一条是完整，其余只有一个属性结果。**可能是有bug**
-4. 涉及到数字的结果，会带有负号（-），不完美。
+3. array结果数据，只有第一条是完整，其余只有一个属性结果。**可能是有bug**。==此问题已经修复执行命令`npm install https://github.com/SimonOsaka/swagger-mock-parser`==
+4. 涉及到数字的结果，会带有负号（-），不完美。==此问题已经修复执行命令`npm install https://github.com/SimonOsaka/swagger-mock-parser`==。***最小值为1***。
+
