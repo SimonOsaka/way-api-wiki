@@ -1,5 +1,12 @@
-开源[邮件服务器](https://github.com/tomav/docker-mailserver)，无图形化界面，docker方式安装。
-下载慢，使用镜像加速，不要更改daemon的内容和顺序。
+## zimbra
+
+使用这个邮件服务器。具体功能比较强，符合需要。使用docker-zimbra进行安装，但没有成功，mlgbd网速太慢了。
+
+
+
+~~开源[邮件服务器](https://github.com/tomav/docker-mailserver)，无图形化界面，docker方式安装。~~
+~~下载慢，使用镜像加速，不要更改daemon的内容和顺序。~~
+
 ```json
 {
   "registry-mirrors" : [
@@ -17,7 +24,7 @@
   "debug" : true
 }
 ```
-安装可行，但无法发送邮件，似乎没有做dns配置和域名配置的关系。被退回的邮件内容。
+~~安装可行，但无法发送邮件，似乎没有做dns配置和域名配置的关系。被退回的邮件内容。~~
 ```
 This is the mail system at host mail.jicu.vip.
 
@@ -61,7 +68,7 @@ Diagnostic-Code: smtp; 550 Ip frequency limited
 
 test
 ```
-docker logs
+~~docker logs~~
 ```
 Sep 29 06:34:45 mail dovecot: imap-login: Login: user=<mk@jicu.vip>, method=PLAIN, rip=172.18.0.1, lip=172.18.0.2, mpid=2534, TLS, session=<b7GuUKuTZtusEgAB>
 Sep 29 06:34:45 mail dovecot: imap(mk@jicu.vip)<2534><b7GuUKuTZtusEgAB>: Logged out in=32 out=515 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
@@ -98,5 +105,5 @@ Sep 29 06:40:04 mail postfix/anvil[2259]: statistics: max cache size 1 at Sep 29
 Sep 29 06:40:44 mail postfix/smtpd[2739]: timeout after END-OF-MESSAGE from localhost[127.0.0.1]
 Sep 29 06:40:44 mail postfix/smtpd[2739]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 commands=4
 ```
-## 参考文献
-1. [利用Docker自建多功能加密邮件服务器](https://www.itmanbu.com/docker-mail-server.html)
+## ~~参考文献~~
+1. ~~[利用Docker自建多功能加密邮件服务器~~](https://www.itmanbu.com/docker-mail-server.html)
