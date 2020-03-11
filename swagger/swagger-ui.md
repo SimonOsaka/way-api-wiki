@@ -86,9 +86,11 @@ app.listen(3000, function () {
 ```js
 // url = "http://petstore.swagger.io/v2/swagger.json" ,
 url = "/static/swagger.json",
+// 一般同一个项目会有多个版本的swagger.json接口定义文件，这时需要改写，核心内容为如下（也可以放到json文件，然后引入）
+{urls: [{url:"",name:""},{url:"",name:""}]}
 ```
 
-重启 node 服务即可
+~~重启 node 服务即可~~
 
 ---
 
