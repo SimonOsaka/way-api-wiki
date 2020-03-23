@@ -102,8 +102,8 @@
    # 编辑定时任务
    crontab -e
 
-   # 写入定时任务。每隔七天，凌晨3点执行重新生成证书脚本
-   0 3 */7 * * /apps/script/cert-renew.sh
+   # 写入定时任务。每周日，凌晨3点执行重新生成证书脚本
+   * 3 * * 0 /apps/script/cert-renew.sh >> /apps/log/crontab/cert-renew-$(date +"\%Y-\%m-\%d").log 2>&1
 
    # 查看定时任务列表
    crontab -l
