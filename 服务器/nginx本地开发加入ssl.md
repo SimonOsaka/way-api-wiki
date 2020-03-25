@@ -4,14 +4,14 @@
 
 2. 执行命令
 
-   ```shell
-   # 用openssl生成key和crt文件
-   > openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout /apps/cert/nginx.key -out /apps/cert/nginx.crt
+```shell
+# 用openssl生成key和crt文件
+> openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout /apps/cert/nginx.key -out /apps/cert/nginx.crt
 ```
-   
+
 3. 填写注册内容
 
-   ```shell
+```shell
 Country Name (2 letter code) [XX]: CN
 State or Province Name (full name) []: beijing    
 Locality Name (eg, city) [Default City]: beijing
@@ -19,26 +19,26 @@ Organization Name (eg, company) [Default Company Ltd]: 回车
 Organizational Unit Name (eg, section) []: 回车
 Common Name (eg, your name or your server's hostname) []: *.jicu.vip
 Email Address []: geniusmickymouse@qq.com
-   ```
+```
 
 注：hostname使用**`*.jicu.vip`**代表泛域名。也可以使用**localhost**。
 
 4. 配置nginx
 
-   ```nginx
+```nginx
 server {
   listen 443 ssl;
   server_name  mp.jicu.vip;
 
   ssl_certificate /apps/cert/nginx.crt;
   ssl_certificate_key /apps/cert/nginx.key;
-  
+
   location / {
     root /apps/web/mp;
     index index.html;
   }
 }
-   ```
+```
 
 5. 校验nginx配置，重启
 
