@@ -53,7 +53,7 @@ docker run -p 8080:8080 -e URLS="[{ name: \"one\", url: \"/foo/swagger_1.json\"}
 * https://www.jianshu.com/p/879baf1cff07
 * https://github.com/Pmovil/docker-swagger-ide
 
-
+* [openapi学习教程](https://www.breakyizhan.com/swagger/2806.html)
 
 
 
