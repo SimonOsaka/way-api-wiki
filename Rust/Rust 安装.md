@@ -20,3 +20,23 @@ export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
 
 修改后，继续执行安装。
 
+
+
+## Rust升级
+
+#### rustup update更新慢
+
+```shell
+# 执行如下命令，该命令只是一段，全部内容去清华mirror的rust页面中查看
+echo 'export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup' >> ~/.bash_profile
+```
+
+或者
+
+```shell
+vi ~/.bash_profile
+export RUSTUP_DIST_SERVER=http://mirrors.rustcc.cn
+export RUSTUP_UPDATE_ROOT=http://mirrors.rustcc.cn/rustup rustup install stable
+```
+
+`source ~/.bash_profile`再次执行更新即可。
