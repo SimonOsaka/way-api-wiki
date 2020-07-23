@@ -48,6 +48,9 @@ export RUSTUP_UPDATE_ROOT=http://mirrors.rustcc.cn/rustup rustup install stable
 #### macOS编译，linux运行
 
 ```shell
+# 查看可用的目标环境
+rustup target list
+
 # 引入linux静态编译包
 rustup target add x86_64-unknown-linux-musl
 
@@ -95,4 +98,6 @@ source ~/.bash_profile
 ```
 
 参考：[https://www.qttc.net/529-rust-cross-compile-mac-to-linux.html](https://www.qttc.net/529-rust-cross-compile-mac-to-linux.html)
+
+参考：[https://blog.csdn.net/u013195275/article/details/106070326/](https://blog.csdn.net/u013195275/article/details/106070326/)
 
