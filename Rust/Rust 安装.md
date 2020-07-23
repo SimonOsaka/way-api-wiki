@@ -40,3 +40,59 @@ export RUSTUP_UPDATE_ROOT=http://mirrors.rustcc.cn/rustup rustup install stable
 ```
 
 `source ~/.bash_profile`再次执行更新即可。
+
+## Rust交叉编译
+
+开发在Mac，产品最后运行在Linux。两种环境编译的二进制包是无法在彼此环境上运行的。
+
+#### macOS编译，linux运行
+
+```shell
+# 引入linux静态编译包
+rustup target add x86_64-unknown-linux-musl
+
+# 执行编译
+cargo build --release --target=x86_64-unknown-linux-musl
+
+Finished release [optimized] target(s) in 54.64s
+######################################################
+# 说明编译成功！！！
+# 在target/x86_64-unknown-linux-musl/release目录内获得。
+######################################################
+```
+
+#### 编译过程中发生错误
+
+##### 提示：/bin/sh: musl-gcc: command not found
+
+```shell
+# 安装
+brew install filosottile/musl-cross/musl-cross
+
+# 编辑cargo
+vi $HOME/.cargo/config
+# 加入如下内容，保存
+[target.x86_64-unknown-linux-musl]
+linker = "x86_64-linux-musl-gcc"
+
+# 执行目标linux平台的编译命令
+CC_x86_64_unknown_linux_musl="x86_64-linux-musl-gcc" cargo build --release --target=x86_64-unknown-linux-musl
+```
+
+##### 提示：openssl err的错误
+
+```shell
+# 安装openssl 1.1
+brew install openssl@1.1
+
+# 修改环境变量
+vi ~/.bash_profile
+export OPENSSL_DIR="/usr/local/opt/openssl@1.1" # 根据实际目录填写，这是brew默认安装目录
+# 保存退出
+
+# 执行source完成
+source ~/.bash_profile
+```
+
+参考：[https://www.qttc.net/529-rust-cross-compile-mac-to-linux.html](https://www.qttc.net/529-rust-cross-compile-mac-to-linux.html)
+
