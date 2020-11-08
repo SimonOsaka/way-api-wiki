@@ -92,3 +92,11 @@ let ct: DateTime<Utc> = row.get("create_time");
 ct.with_timezone(&FixedOffset::east(8*3600));
 ```
 
+### 4. 如何运行没有cargo.toml的examples/xxx.rs文件
+
+```shell
+# 项目根目录下执行
+# 例如：warp
+cargo run --example xxx
+```
+
