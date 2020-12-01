@@ -115,3 +115,4 @@
    sudo /apps/software/certbot-auto renew --force-renew --cert-name jicu.vip --manual-auth-hook /usr/bin/certbot-alidns && /usr/local/nginx/sbin/nginx -s reload
    ```
 
+5. 访问http://s.tool.chinaz.com/https/检查`SSL`过期时间是否更新
