@@ -6,14 +6,14 @@
 
 单点登录英文全称Single Sign On，简称就是SSO。它的解释是：**在多个应用系统中，只需要登录一次，就可以访问其他相互信任的应用系统**。
 
-![721f02ebe06639e6232b59535d6423db75086693](uploads/7f579f3785a951e1086cad3d10c72ab2/721f02ebe06639e6232b59535d6423db75086693.png)
+![721f02ebe06639e6232b59535d6423db75086693](../uploads/7f579f3785a951e1086cad3d10c72ab2/721f02ebe06639e6232b59535d6423db75086693.png)
 
 如图所示，图中有4个系统，分别是Application1、Application2、Application3、和SSO。Application1、Application2、Application3没有登录模块，而SSO只有登录模块，没有其他的业务模块，当Application1、Application2、Application3需要登录时，将跳到SSO系统，SSO系统完成登录，其他的应用系统也就随之登录了。这完全符合我们对单点登录（SSO）的定义。
 
 ## 技术实现
 
 在说单点登录（SSO）的技术实现之前，我们先说一说普通的登录认证机制。
-![555f1a6856468578020ea0486f563b3633813050](uploads/fb19478e49f822b3c661acfe2ce0c063/555f1a6856468578020ea0486f563b3633813050.png)
+![555f1a6856468578020ea0486f563b3633813050](../uploads/fb19478e49f822b3c661acfe2ce0c063/555f1a6856468578020ea0486f563b3633813050.png)
 
 如上图所示，我们在浏览器（Browser）中访问一个应用，这个应用需要登录，我们填写完用户名和密码后，完成登录认证。这时，我们在这个用户的session中标记登录状态为yes（已登录），同时在浏览器（Browser）中写入Cookie，这个Cookie是这个用户的唯一标识。下次我们再访问这个应用的时候，请求中会带上这个Cookie，服务端会根据这个Cookie找到对应的session，通过session来判断这个用户是否登录。如果不做特殊配置，这个Cookie的名字叫做jsessionid，值在服务端（server）是唯一的。
 
@@ -25,7 +25,7 @@
 
 * Cookie是不能跨域的，我们Cookie的domain属性是sso.a.com，在给app1.a.com和app2.a.com发送请求是带不上的。
 * sso、app1和app2是不同的应用，它们的session存在自己的应用内，是不共享的。
-![4e31c204eea22ee07154df928a5ff5350da03d7a](uploads/6aa26e28e6dce9c268d6e2c5e7b35f65/4e31c204eea22ee07154df928a5ff5350da03d7a.png)
+![4e31c204eea22ee07154df928a5ff5350da03d7a](../uploads/6aa26e28e6dce9c268d6e2c5e7b35f65/4e31c204eea22ee07154df928a5ff5350da03d7a.png)
 
 那么我们如何解决这两个问题呢？针对第一个问题，sso登录以后，可以将Cookie的域设置为顶域，即.a.com，这样所有子域的系统都可以访问到顶域的Cookie。**我们在设置Cookie时，只能设置顶域和自己的域，不能设置其他的域。比如：我们不能在自己的系统中给baidu.com的域设置Cookie。**
 
@@ -38,7 +38,7 @@ Cookie的问题解决了，我们再来看看session的问题。我们在sso系�
 同域下的单点登录是巧用了Cookie顶域的特性。如果是不同域呢？不同域之间Cookie是不共享的，怎么办？
 
 这里我们就要说一说CAS流程了，这个流程是单点登录的标准流程。
-![dcb743204f8a201be53df5338fc34affe5fa1059](uploads/17e1f20195b8950da3b25274dd6803c3/dcb743204f8a201be53df5338fc34affe5fa1059.png)
+![dcb743204f8a201be53df5338fc34affe5fa1059](../uploads/17e1f20195b8950da3b25274dd6803c3/dcb743204f8a201be53df5338fc34affe5fa1059.png)
 
 上图是CAS官网上的标准流程，具体流程如下：
 

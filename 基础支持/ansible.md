@@ -1,4 +1,5 @@
 ## 安装
+
 * 预览版，数据不持久化
 ```shell
 docker run -d -p 443:443 shawnxlw/cat
@@ -103,7 +104,7 @@ ansible-tower-service restart
 ```
 * 验证
 打开–settings–VIEW YOUR LICENSE 查看 
-![20180130195352188](uploads/8063ae8935326bdb0c4618df591b59ef/20180130195352188.png)
+![20180130195352188](../uploads/8063ae8935326bdb0c4618df591b59ef/20180130195352188.png)
 3. 第三种（**已验证，可行**）。最暴力最简单最傻瓜方式，root用户登录，执行以下命令：
 ```shell
 echo codyguo > /var/lib/awx/i18n.db
