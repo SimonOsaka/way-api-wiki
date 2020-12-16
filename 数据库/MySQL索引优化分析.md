@@ -206,7 +206,7 @@ mysql> explain select * from itdragon_order_list where order_level=3 order by in
 官方定义：索引（Index） 是帮助MySQL高效获取数据的数据结构。
 大家一定很好奇，索引为什么是一种数据结构，它又是怎么提高查询的速度？我们拿最常用的二叉树来分析索引的工作原理。看下面的图片：
 
-![640_wxfrom_5_wx_lazy_1_wx_co_1](uploads/3a5cc7da54f527a602d932191dbd602d/640_wxfrom_5_wx_lazy_1_wx_co_1)
+![640_wxfrom_5_wx_lazy_1_wx_co_1](../uploads/3a5cc7da54f527a602d932191dbd602d/640_wxfrom_5_wx_lazy_1_wx_co_1)
 
 **创建索引的优势：**
 
