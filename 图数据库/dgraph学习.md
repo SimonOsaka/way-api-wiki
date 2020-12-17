@@ -19,7 +19,7 @@ dgraph官方学习教程GitHub：`https://github.com/dgraph-io/tutorial`
 
    ```shell
    vi theme/hugo-tutorials/layouts/partials/header.html
-   # 查找code.jquery.com，找到引用js的位置，复制文件名，去bootcdn找到一样版本号的js文件，然后替换保存。
+   # 查找code.jquery.com，找到引用js的位置，复制文件名，去bootcdn找到一样版本号的js文件链接，然后替换保存。
    ```
 
 4. 重启tutorial，访问正常。
