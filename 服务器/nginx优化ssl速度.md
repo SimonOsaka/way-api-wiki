@@ -6,7 +6,6 @@
 
 ## 为什么要优化 Ngin HTTPS 延迟
 
-------
 
 Nginx 常作为最常见的服务器，常被用作负载均衡 (Load Balancer)、反向代理 (Reverse Proxy)，以及网关 (Gateway) 等等。一个配置得当的 Nginx 服务器单机应该可以[期望承受住 50K 到 80K 左右](https://github.com/denji/nginx-tuning)每秒的请求，同时将 CPU 负载在可控范围内。
 
@@ -18,7 +17,6 @@ Nginx 常作为最常见的服务器，常被用作负载均衡 (Load Balancer)�
 
 ## TLS 握手和延迟
 
-------
 
 很多时候开发者会认为：如果不是绝对在意性能，那么了解底层和更细节的优化没有必要。这句话在很多时候是恰当的，因为很多时候复杂的底层逻辑必须包起来，才能让更高层的应用开发复杂度可控。比如说，如果你就只需要开发一个 APP 或者网站，可能并没有必要关注汇编细节，关注编译器如何优化你的代码——毕竟在苹果或者安卓上很多优化在底层就做好了。
 
@@ -58,6 +56,7 @@ HTTP/2 标准是从 Google 的 SPDY 上进行的改进，比起 HTTP 1.1 提升�
 
 
 ![HTTP 1.1 与 HTTP 2.0 速度对比](./nginx优化ssl速度.assets/HTTP2-speed-compare.png)
+
 HTTP 1.1 与 HTTP 2.0 速度对比
 
 
@@ -79,7 +78,9 @@ listen 443 ssl http2;
 
 
 
-![用 Chrome 确认 HTTP/2 已经打开](./nginx优化ssl速度.assets/chrome-check-http2.png)用 Chrome 确认 HTTP/2 已经打开
+![用 Chrome 确认 HTTP/2 已经打开](./nginx优化ssl速度.assets/chrome-check-http2.png)
+
+用 Chrome 确认 HTTP/2 已经打开
 
 
 
@@ -207,7 +208,9 @@ Nginx 在这里作为反向代理，处理一些安全、流量控制和 TLS 的
 
 
 
-![Search Grafana](./nginx优化ssl速度.assets/search-p95.png)Search Grafana
+![Search Grafana](./nginx优化ssl速度.assets/search-p95.png)
+
+Search Grafana
 
 
 
@@ -219,7 +222,9 @@ Nginx 在这里作为反向代理，处理一些安全、流量控制和 TLS 的
 
 
 
-![调整后延迟](./nginx优化ssl速度.assets/latency-after-tuning.png)调整后延迟
+![调整后延迟](./nginx优化ssl速度.assets/latency-after-tuning.png)
+
+调整后延迟
 
 
 
