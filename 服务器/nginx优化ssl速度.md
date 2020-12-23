@@ -1,5 +1,6 @@
-[
-![让 Nginx 飞起来](./nginx优化ssl速度.assets/high-performance-nginx-header.png)](https://kalasearch.cn/static/deb4260f26568dcb97a43ecf8622801f/29007/high-performance-nginx-header.png)让 Nginx 飞起来
+![让 Nginx 飞起来](./nginx优化ssl速度.assets/high-performance-nginx-header.png)
+
+让 Nginx 飞起来
 
 
 
