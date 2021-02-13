@@ -23,7 +23,41 @@ registry="https://mirrors.ustc.edu.cn/crates.io-index"
 # ⚠️此处如果使用$HOME/.cargo/config将不起作用
 ```
 
+### dockerfile
 
+```dockerfile
+# 重新制作一个新的docker image
+FROM rust:alpine
+# 修改alpine源为ustc
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+# 避免cargo编译时出现问题
+ENV CARGO_HTTP_MULTIPLEXING false
+# 加入cargo国内源的配置文件
+RUN mkdir /.cargo
+ADD ./cargo_temp_config /.cargo/config
+```
+
+执行命令`docker build -t rust_alpine .`构建镜像
+
+### 多阶段构建镜像
+
+```dockerfile
+FROM rust:alpine as builder
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+ENV CARGO_HTTP_MULTIPLEXING false
+RUN mkdir /.cargo
+ADD ./cargo_temp_config /.cargo/config
+RUN apk add git
+RUN git clone https://xxx.xxx.xxx/xxx/xxx # 改为自己的仓库地址
+RUN cd xxx
+RUN cargo build --release
+
+FROM rust:alpine
+COPY --from=builder /build_source/target/release/xxx .
+CMD ["./xxx"]
+```
+
+执行命令`docker build -t rust_alpine .`构建镜像
 
 ## cargo install编译中出现的问题
 
@@ -41,4 +75,6 @@ registry="https://mirrors.ustc.edu.cn/crates.io-index"
 
 > git clone https://xxx...
 ```
+
+
 
