@@ -116,3 +116,21 @@
    ```
 
 5. 访问http://s.tool.chinaz.com/https/检查`SSL`过期时间是否更新
+
+### 使用acme.sh配置ssl
+
+1. 安装。查看[官方说明](https://github.com/acmesh-official/acme.sh/wiki/说明)。*如果是第一次使用，最好阅读一遍*
+2. 安装完成后，重启一个命令行窗口`alias acme.sh`才起作用。
+3. 配置对应域名运营商的api key。不知道如何配置，查看[官方说明dnsapi](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)
+4. 申请证书。执行命令`acme.sh --issue --dns dns_ali -d jicu.vip -d *.jicu.vip`。
+
+   - 泛域名必须使用`--dns`来申请，否则会提示`The supported validation types are dns-01,but you specified http-01`，不同的服务提供商参数值会不同，这里是`dns_ali`阿里的。
+   - 如果出现错误并看不到信息，在命令后面加入`--log`、`--debug`或`--debug 2`，后一个比前一个日志详细度更高。
+5. 安装证书。执行命令`acme.sh --install-cert -d jicu.vip \
+   --key-file       /etc/letsencrypt/live/jicu.vip/privkey.pem  \
+   --fullchain-file /etc/letsencrypt/live/jicu.vip/fullchain.pem \
+   --reloadcmd     "/usr/local/nginx/sbin/nginx -s reload"`
+6. 打开浏览器查看自己的域名证书是否正常。
+7. 由于let's encrypt会不定时修改策略，acme.sh也会进行跟进更新，为了防止再次使用acme.sh发生未知问题，使用之前最好进行升级，执行命令`acme.sh --upgrade`
+
+提示：打开`https://crt.sh`，可以查看证书**申请次数**和**起止时间**是否==正常==。
