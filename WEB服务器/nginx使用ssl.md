@@ -1,5 +1,7 @@
 ## nginx使用ssl
 
+## 使用certbot-auto配置ssl
+
 ### 首次生成证书
 
 使用免费的Let's encrypt获取证书并让nginx使用，具体如下
@@ -117,7 +119,7 @@
 
 5. 访问http://s.tool.chinaz.com/https/检查`SSL`过期时间是否更新
 
-### 使用acme.sh配置ssl
+## 使用acme.sh配置ssl
 
 1. 安装。查看[官方说明](https://github.com/acmesh-official/acme.sh/wiki/说明)。*如果是第一次使用，最好阅读一遍*
 2. 安装完成后，重启一个命令行窗口`alias acme.sh`才起作用。
