@@ -1,8 +1,14 @@
 ## 在线做图
+
 简单
 [fotor懒设计](https://www.fotor.com.cn/)
 
+## 在线PhotoShop
+
+[photopea](https://www.photopea.com)
+
 ## App生成icon\splash
+
 QiAppIconGenerator，集成icon\splash的ios和android图片生成工具。
 [QiAppIconGenerator](https://github.com/QiShare/QiAppIconGenerator)
 
