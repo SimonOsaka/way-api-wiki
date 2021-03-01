@@ -73,45 +73,42 @@
 > 软件具体什么功能，不懂的就搜索一下。软件具体安装过程，去搜索。
 
 * 日常软件
-  - 搜狗输入法、四叶草输入法
-  - Google Chrome
-  - LibreOffice
-  - Typora
-  - kate
-
+  - `搜狗输入法`、四叶草输入法
+  - `Google Chrome`
+  - `LibreOffice`
+  - `Typora`
+  - `kate`
 * 开发IDE
-  * IDEA 社区版
-  * Virtual Studio Code
-
+  * `IDEA 社区版`
+  * `Virtual Studio Code`
 * 版本控制
 
-  * GIT
-  * GitAhead
-
+  * `GIT`
+  * `GitAhead`
 * 数据库
 
-  * Navicat、Dbeaver
-  * PostgreSql
+  * `Navicat`、Dbeaver
+  * `PostgreSql`
   * redis-desktop-manager
-
 * 其它
 
-  * JDK（OpenJDK、Amazon Corretto ...）
-  * Rust
-  * Termius
-
-  * FileZilla
-  * Docker、Podman
-  * SwitchHosts!
-  * Postman
+  * `JDK`（OpenJDK、Amazon Corretto ...）
+  * `Rust`
+  * `Termius`
+  * `FileZilla`
+  * `Docker`、Podman
+  * `SwitchHosts!`
+  * `Postman`
   * unrar
+* 美化
+  * `dockbarX`类似ubuntu左侧栏，可以将app锁定在栏内方便使用。也可以将其认为是MacOS的dock栏。
 
 #### manjaro软件安装技巧
 
 > 一般使用pacman或yay能完成安装，奈何有一些应用没有提供，所以需要加入额外的操作过程。
 
-* 使用pacman安装🚀🚀🚀🚀🚀
-* 使用yay安装🚀🚀🚀🚀🚀
-* 单独对PKGBUILD文件进行编辑并执行`makepkg -si`🚀🚀🚀🚀
-* 使用snap安装🚀🚀
-* 使用brew安装🚀🚀
+* 使用`pacman`安装🚀🚀🚀🚀🚀
+* 使用`yay`安装🚀🚀🚀🚀🚀
+* 单独对`PKGBUILD`文件进行编辑并执行`makepkg -si`🚀🚀🚀🚀
+* 使用`snap`安装🚀🚀
+* 使用`brew`安装🚀🚀
