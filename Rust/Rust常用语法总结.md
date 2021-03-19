@@ -100,3 +100,9 @@ ct.with_timezone(&FixedOffset::east(8*3600));
 cargo run --example xxx
 ```
 
+## 备注
+
+### 学习网站
+
+- https://tourofrust.com/00_zh-cn.html
+
