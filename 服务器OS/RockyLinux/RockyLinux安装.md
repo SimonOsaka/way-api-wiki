@@ -13,3 +13,29 @@
 
 如果RockyLinux不知如何使用，搜索参考CentOS 8，基本一模一样。
 
+## 替换源
+
+>  官方镜像源列表[https://mirror.rockylinux.org/mirrormanager/mirrors](https://mirror.rockylinux.org/mirrormanager/mirrors)
+
+### 修改镜像源
+
+```shell
+sed -e 's|^mirrorlist=|#mirrorlist=|g' \
+    -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.sjtug.sjtu.edu.cn/rocky|g' \
+    -i.bak \
+    /etc/yum.repos.d/Rocky-*.repo
+
+# 生成缓存
+dnf makecache
+```
+### 恢复官方源
+```shell
+sed -e 's|^#mirrorlist=|mirrorlist=|g' \
+    -e 's|^baseurl=https://mirrors.sjtug.sjtu.edu.cn/rocky|#baseurl=http://dl.rockylinux.org/$contentdir|g' \
+    -i.bak \
+    /etc/yum.repos.d/Rocky-*.repo
+
+# 生成缓存
+dnf makecache
+```
+
