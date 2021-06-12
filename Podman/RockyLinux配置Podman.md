@@ -44,3 +44,8 @@ podman-compose -f docker-compose.yml up -d
 - 如果podman-compose执行出错，安装开发版devel.tar.gz
 - ~~如果开发版也执行出错，那么可能是linux系统少安装一些软件（试过完全安装linux后，执行命令正常执行），没有详细的提示，不知道少什么。~~
 - 毕竟是开源软件，要有足够的心理准备。
+
+## 参考文献
+
+1. [RedHat/CentOS8[Podman]安装和配置 - 简书 (jianshu.com)](https://www.jianshu.com/p/d69017fac5dc)
+
