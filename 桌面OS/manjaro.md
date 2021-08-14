@@ -128,3 +128,6 @@ sudo pacman -S archlinuxcn-keyring
 ==> ERROR: 请删除 /etc/pacman.conf 中 [archlinuxcn] 下的 SigLevel= 行，以使用默认设置
 ```
 执行：`删除 /etc/pacman.conf 中 [archlinuxcn] 下的 SigLevel= 行`
+
+## 参考
+- [Manjaro 玩机记录](https://www.cnblogs.com/demonxian3/p/9248640.html)
