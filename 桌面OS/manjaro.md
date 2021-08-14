@@ -112,3 +112,19 @@
 * 单独对`PKGBUILD`文件进行编辑并执行`makepkg -si`🚀🚀🚀🚀
 * 使用`snap`安装🚀🚀
 * 使用`brew`安装🚀🚀
+
+### manjaro系统更新
+> 软件包管理器，执行更新
+
+#### manjaro系统更新出错解决
+- `错误：无法远程查找到密钥`
+```shell
+# 执行
+sudo pacman -S archlinuxcn-keyring
+```
+如果出现
+```shell
+==> ERROR: Please remove the SigLevel= line of [archlinuxcn] from "/etc/pacman.conf" to use the default setting
+==> ERROR: 请删除 /etc/pacman.conf 中 [archlinuxcn] 下的 SigLevel= 行，以使用默认设置
+```
+执行：`删除 /etc/pacman.conf 中 [archlinuxcn] 下的 SigLevel= 行`
