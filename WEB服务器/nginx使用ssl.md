@@ -20,12 +20,12 @@
 7. 由于let's encrypt会不定时修改策略，acme.sh也会进行跟进更新，为了防止再次使用acme.sh发生未知问题，使用之前最好进行升级，执行命令`acme.sh --upgrade`
 8. 更新证书使用命令：`acme.sh --renew --dns dns_ali -d jicu.vip -d *.jicu.vip`
 
-提示：打开`https://crt.sh`，可以查看证书**申请次数**和**起止时间**是否==正常==。
+> 提示：打开`https://crt.sh`，可以查看证书**申请次数**和**起止时间**是否==正常==。
 ---
 
-### 使用certbot-auto配置ssl（失效）
+### ~~使用certbot-auto配置ssl~~（失效）
 
-#### 首次生成证书
+#### ~~首次生成证书~~
 
 使用免费的Let's encrypt获取证书并让nginx使用，具体如下
 
@@ -52,7 +52,7 @@
    添加DNS完成后，再继续，直到提示完成。
 ---
 
-#### nginx配置证书
+#### ~~nginx配置证书~~
 
    1. 在nginx的conf文件夹中，创建文件`ssl.conf`
 
@@ -90,7 +90,7 @@
 
 3. 访问域名www.jicu.vip是否正常，如果不正常问问百度。
 
-#### 配置域名自动续期
+#### ~~配置域名自动续期~~
 
 1. 先配置两个环境变量，最好写在/etc/profile，或者.bashrc里面，然后执行source生效
 
