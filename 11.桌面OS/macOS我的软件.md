@@ -3,7 +3,7 @@
 ## 文本工具
 
 - **CotEditor**，文本编辑，功能比较强大，免费
-- **Typora**，markdown文本编辑，非常强大，免费可升级
+- **Mark Text**，markdown文本编辑，非常强大，免费可升级
 - **LibreOffice**，word、excel、ppt等文档编辑，免费使用，有增值收费功能
 - **MindLine**，一个封装了百度思维导图的编辑工具，免费
 - **SwitchHosts!**，系统hosts编辑工具，方便开发使用切换hosts，免费
