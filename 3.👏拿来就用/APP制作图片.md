@@ -6,6 +6,7 @@
 ## 在线PhotoShop
 
 [photopea](https://www.photopea.com)
+[稿定设计](https://www.uupoop.com/ps/)
 
 ## App生成icon\splash
 
