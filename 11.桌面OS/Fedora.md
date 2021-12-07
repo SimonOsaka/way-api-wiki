@@ -8,7 +8,45 @@
 sudo dnf upgrade
 ```
 
-## 安装软件
+## 如何安装软件
+
+- 多种安装方式
+  
+  - 通过系统仓库安装`sudo dnf install xxxxx`
+  
+  - 官网手动下载安装
+    
+    - 已经**提供**RPM，下载后鼠标双击安装。或命令行`rpm -ivh 软件名.rpm`
+    
+    - **未提供**RPM，下载后将目录统一放到一处，如果未提供`xxxxx.desktop`，新创建一个`xxxxx.desktop`文件，最后放到`/usr/share/applications`内。文件内容参考如下（或`/usr/share/applications`任意文件内容）
+      
+      ```shell
+      [Desktop Entry]
+      Encoding=UTF-8
+      Name=xxxxx
+      Exec=/home/用户名/software/xxxxx/可执行文件名称
+      Icon=/home/用户名/software/xxxxx/app/icons/icon_128x128.png
+      Terminal=false
+      Type=Application
+      Categories=Development;
+      ```
+  
+  - flathub.org安装软件
+    
+    - 系统已默认安装flatpak，先安装仓库`flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+    - 每个软件最下方都有安装命令
+  
+  - snapcraft.io安装软件
+    
+    - snap安装`sudo dnf install snapd`和`sudo ln -s /var/lib/snapd/snap /snap`
+    - snap软件安装`sudo snap install xxxxx`
+    - 在fedora35版本，applications没有xxxxx.desktop，导致无法从菜单启动和查找
+  
+  - AUR(archlinux)参考pkgbuild打包
+    
+    - 打开软件页面，右侧`view PKGBUILD`，看到aur打包内容。抽取必要信息，下载对应源包并制作。
+    
+    - 如果源包是snap，使用`unsquashfs -f -d <解包后的路径> <软件名>.snap`，完成后，按照手动安装方法制作。
 
 ### VScode
 
@@ -71,3 +109,29 @@ sudo -i
 
 nginx
 ```
+
+### Git图形客户端
+
+[gitg—Linux Apps on Flathub](https://flathub.org/apps/details/org.gnome.gitg)
+
+[Gittyup—Linux Apps on Flathub](https://flathub.org/apps/details/com.github.Murmele.Gittyup)
+
+### Filezilla
+
+```shell
+sudo dnf install filezilla
+```
+
+### Switchhosts!
+
+Official [oldj/SwitchHosts: Switch hosts quickly! (github.com)](https://github.com/oldj/SwitchHosts)
+
+手动制作`switchhosts.desktop`和`icon_128x128.png`
+
+### OmniDB
+
+Official RPM [OmniDB - Open Source Collaborative Environment For Database Management](https://omnidb.org/)
+
+### Termius
+
+参考AUR [AUR (en) - termius (archlinux.org)](https://aur.archlinux.org/packages/termius/)
