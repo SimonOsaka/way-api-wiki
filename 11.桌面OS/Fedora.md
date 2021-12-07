@@ -14,9 +14,9 @@ sudo dnf upgrade
   
   - 通过系统仓库安装`sudo dnf install xxxxx`
   
-  - 官网手动下载安装
+  - 手动安装
     
-    - 已经**提供**RPM，下载后鼠标双击安装。或命令行`rpm -ivh 软件名.rpm`
+    - **提供**RPM，下载后鼠标双击安装。或命令行`rpm -ivh 软件名.rpm`
     
     - **未提供**RPM，下载后将目录统一放到一处，如果未提供`xxxxx.desktop`，新创建一个`xxxxx.desktop`文件，最后放到`/usr/share/applications`内。文件内容参考如下（或`/usr/share/applications`任意文件内容）
       
@@ -46,7 +46,7 @@ sudo dnf upgrade
     
     - 打开软件页面，右侧`view PKGBUILD`，看到aur打包内容。抽取必要信息，下载对应源包并制作。
     
-    - 如果源包是snap，使用`unsquashfs -f -d <解包后的路径> <软件名>.snap`，完成后，按照手动安装方法制作。
+    - 如果源包是snap，执行命令`curl -H 'X-Ubuntu-Series: 16' https://api.snapcraft.io/api/v1/snaps/details/<snap软件名>`获取详细json信息，复制`download_url`属性内容，下载源包。执行命令`unsquashfs -f -d <解包后的路径> <软件名>.snap`解包，完成后按照<u>*手动安装（未提供RPM）*</u>方法制作。
 
 ### VScode
 
