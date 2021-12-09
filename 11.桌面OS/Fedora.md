@@ -24,11 +24,31 @@ sudo dnf upgrade
       [Desktop Entry]
       Encoding=UTF-8
       Name=xxxxx
-      Exec=/home/用户名/software/xxxxx/可执行文件名称
-      Icon=/home/用户名/software/xxxxx/app/icons/icon_128x128.png
+      Exec=xxxxx
+      Icon=xxxxx.png
       Terminal=false
       Type=Application
       Categories=Development;
+      ```
+      
+      <mark>提示</mark>
+      
+      将可执行文件链接到`/usr/bin`，举例：
+      
+      ```shell
+      ln -s ${PWD}/xxxxx /usr/bin/xxxxx
+      ```
+      
+      将文件图标链接到`/usr/share/pixmaps`，举例：
+      
+      ```shell
+      ln -s ${PWD}/xxxxx.png /usr/share/pixmaps/xxxxx.png
+      ```
+      
+      将`xxxxx.desktop`链接到`/usr/share/applications`
+      
+      ```shell
+      ln -s ${PWD}/xxxxx.desktop /usr/share/applications/xxxxx.desktop
       ```
   
   - flathub.org安装软件
