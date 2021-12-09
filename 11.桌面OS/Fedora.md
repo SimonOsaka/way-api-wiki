@@ -135,3 +135,14 @@ Official RPM [OmniDB - Open Source Collaborative Environment For Database Manage
 ### Termius
 
 参考AUR [AUR (en) - termius (archlinux.org)](https://aur.archlinux.org/packages/termius/)
+
+## 问题
+
+1. Fedora35为什么没有声音？
+
+[Fedora又一次哑了，又如何？ - 掘金 (juejin.cn)](https://juejin.cn/post/7026922180847861796)
+
+```shell
+# 执行命令，重启，声音正常
+sudo dnf swap wireplumber pipewire-media-session
+```
