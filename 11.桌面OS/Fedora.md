@@ -166,3 +166,13 @@ Official RPM [OmniDB - Open Source Collaborative Environment For Database Manage
 # 执行命令，重启，声音正常
 sudo dnf swap wireplumber pipewire-media-session
 ```
+
+2. xfce4-terminal怎么激活下拉显示？
+
+位置：`菜单`->`设置`->`键盘`->`应用程序快捷键`
+
+- 如果有一行内容为`xfce4-terminal`就点击`修改`，修改后的内容`xfce4-terminal --drop-down`并设置一个快捷键，保存。
+
+- 如果没有这一行就`添加`此内容
+
+在系统任意一处使用快捷键，即可激活下拉xfce4-terminal
