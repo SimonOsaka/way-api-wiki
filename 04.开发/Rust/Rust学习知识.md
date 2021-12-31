@@ -1,2 +1,3 @@
 - [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
 - [【译】Rust 常见的问题](https://www.purewhite.io/2021/09/01/rust-faq/)
+- [Rust性能评估与调优实践](https://zhuanlan.zhihu.com/p/451184900)
