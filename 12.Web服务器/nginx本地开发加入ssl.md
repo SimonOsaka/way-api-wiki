@@ -1,5 +1,13 @@
 ## nginx本地开发加入ssl
 
+> 现有两种方式
+
+### 最新方式
+
+[FiloSottile/mkcert: A simple zero-config tool to make locally trusted development certificates with any names you'd like. (github.com)](https://github.com/FiloSottile/mkcert)
+
+### 旧版本
+
 1. 安装`openssl`
 
 2. 执行命令
@@ -55,6 +63,10 @@ nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 6. 浏览器访问`https://mp.jicu.vip`，会有提示（不同浏览器不同），继续（强制）访问。
 7. 如果代码中调用`https://api.jicu.vip`等其它的服务，需要按照==步骤6==在浏览器地址栏中访问一次。
 
-
-
 本文结束！
+
+
+
+# 参考文献
+
+* [https本地自签名证书添加到信任证书访问 - 你不知道的浪漫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/passedbylove/p/12054364.html)
