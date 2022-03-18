@@ -121,4 +121,3 @@ podman-compose start frontend redis
 ## 参考文献
 
 1. [RedHat/CentOS8[Podman]安装和配置 - 简书 (jianshu.com)](https://www.jianshu.com/p/d69017fac5dc)
-

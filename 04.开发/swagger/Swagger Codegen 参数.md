@@ -246,4 +246,3 @@ source folder for generated code
 
         Enable the RxJava adapter using '-DuseRxJava=true'. (RxJava 1.1.3)
 ```
-

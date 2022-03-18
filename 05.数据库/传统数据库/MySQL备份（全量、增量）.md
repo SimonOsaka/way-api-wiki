@@ -121,12 +121,12 @@ echo `date +"%Y年%m月%d日 %H:%M:%S"` $Next Bakup succ! >> $logFile
 # http://dev.mysql.com/doc/mysql/en/server-system-variables.html
 
 [mysqld]
-pid-file	= /var/run/mysqld/mysqld.pid
-socket		= /var/run/mysqld/mysqld.sock
-datadir		= /var/lib/mysql
-#log-error	= /var/log/mysql/error.log
+pid-file    = /var/run/mysqld/mysqld.pid
+socket        = /var/run/mysqld/mysqld.sock
+datadir        = /var/lib/mysql
+#log-error    = /var/log/mysql/error.log
 # By default we only accept connections from localhost
-#bind-address	= 127.0.0.1
+#bind-address    = 127.0.0.1
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
 
@@ -134,4 +134,3 @@ symbolic-links=0
 log-bin=/var/lib/mysql/mysql-bin
 server-id=123454
 ```
-

@@ -50,7 +50,7 @@ LoadingCache<String, Object> loadingCache = Caffeine.newBuilder()
         .maximumSize(10_000)
         .expireAfterWrite(10, TimeUnit.MINUTES)
         .build(key -> createExpensiveGraph(key));
-    
+
 String key = "name1";
 // 采用同步方式去获取一个缓存和上面的手动方式是一个原理。在build Cache的时候会提供一个createExpensiveGraph函数。
 // 查询并在缺失的情况下使用同步的方式来构建一个缓存
@@ -152,13 +152,13 @@ LoadingCache<Key, Graph> graphs = Caffeine.newBuilder()
             .toEpochSecond();
         return TimeUnit.SECONDS.toNanos(seconds);
       }
-      
+
       @Override
       public long expireAfterUpdate(Key key, Graph graph, 
           long currentTime, long currentDuration) {
         return currentDuration;
       }
-      
+
       @Override
       public long expireAfterRead(Key key, Graph graph,
           long currentTime, long currentDuration) {
@@ -198,12 +198,12 @@ assertThat(cache.getIfPresent(key), is(nullValue());
 
 Java4种引用的级别由高到低依次为：强引用 > 软引用 > 弱引用 > 虚引用
 
-| 引用类型 | 被垃圾回收时间 | 用途           | 生存时间          |
-| -------- | -------------- | -------------- | ----------------- |
-| 强引用   | 从来不会       | 对象的一般状态 | JVM停止运行时终止 |
-| 软引用   | 在内存不足时   | 对象缓存       | 内存不足时终止    |
-| 弱引用   | 在垃圾回收时   | 对象缓存       | gc运行后终止      |
-| 虚引用   | Unknown        | Unknown        | Unknown           |
+| 引用类型 | 被垃圾回收时间 | 用途      | 生存时间       |
+| ---- | ------- | ------- | ---------- |
+| 强引用  | 从来不会    | 对象的一般状态 | JVM停止运行时终止 |
+| 软引用  | 在内存不足时  | 对象缓存    | 内存不足时终止    |
+| 弱引用  | 在垃圾回收时  | 对象缓存    | gc运行后终止    |
+| 虚引用  | Unknown | Unknown | Unknown    |
 
 ```
 // Evict when neither the key nor value are strongly reachable

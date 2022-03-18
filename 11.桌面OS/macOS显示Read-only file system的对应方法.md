@@ -6,9 +6,9 @@
 
 ```shell
 liumiaocn:util liumiao$ sw_vers
-ProductName:	Mac OS X
-ProductVersion:	10.15.2
-BuildVersion:	19C57
+ProductName:    Mac OS X
+ProductVersion:    10.15.2
+BuildVersion:    19C57
 liumiaocn:util liumiao$ 
 ```
 
@@ -32,8 +32,6 @@ liumiaocn:/ root#
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200215112038738.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdW1pYW9jbg==,size_16,color_FFFFFF,t_70)
 
 > With macOS Catalina, you can no longer store files or data in the read-only system volume, nor can you write to the “root” directory ( / ) from the command line, such as with Terminal.
-
-
 
 在Catalina版本，使用者无法在只读系统卷进行数据的存储，使用root在通过命令行的方式也无法对/根目录下进行写操作了。
 
@@ -59,8 +57,6 @@ liumiaocn:~ root# mkdir -p /data
 liumiaocn:~ root# 
 ```
 
-
-
 ### 注意事项
 
 注意此种方式如果重启，mount设定的/的write属性就会失去
@@ -74,7 +70,6 @@ System Integrity Protection status: disabled.
 liumiaocn:~ root# 
 ```
 
-
 这种情况下可以使用软连接的方式解决这个问题
 
 ```shell
@@ -83,14 +78,18 @@ liumiaocn:/ root# rm -rf /data/
 liumiaocn:/ root# mkdir -p /usr/local/data
 liumiaocn:/ root# 
 ```
+
 创建软连接
+
 ```shell
 liumiaocn:/ root# ln -s /usr/local/data /data
 liumiaocn:/ root# ls -l /data
 lrwxr-xr-x  1 root  admin  15 Feb 15 16:32 /data -> /usr/local/data
 liumiaocn:/ root#
 ```
+
 这样在重启之后就没有问题了，详细可参看如下日志：
+
 ```shell
 liumiaocn:~ root# mkdir /test
 mkdir: /test: Read-only file system

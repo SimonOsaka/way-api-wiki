@@ -84,16 +84,12 @@ ssh -T git@gitlab.com
 
 现在就可以使用ssh进行git clone了~~
 
-
-
 ### 可能会用到的命令
 
 ```shell
 # 删除所有已经添加的id_rsa_xxxx
 ssh-add -D
 ```
-
-
 
 ### 参考文献
 

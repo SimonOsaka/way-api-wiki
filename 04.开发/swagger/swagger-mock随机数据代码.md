@@ -54,7 +54,7 @@ createMiddleware(swaggerFile, app, (err, middleware) => {
     middleware.validateRequest(),
     // middleware.mock()
   );
-  
+
       app.get('/*', function(req, res, next){
           console.log('visit / ...');
           // console.log(JSON.stringify(res.req.swagger, null, 2));
@@ -119,7 +119,7 @@ function mock(req, res, next) {
 
       // The rest of the Mock middleware will use this ResponseMetadata object
       res.swagger = new SemanticResponse(response, req.swagger.path);
-      
+
       return res.swagger;
     }
 }
@@ -247,10 +247,7 @@ function setContentType(req, res, supported, excluded) {
     }
   }
 }
-
 ```
-
-
 
 ##注意
 
@@ -259,5 +256,5 @@ function setContentType(req, res, supported, excluded) {
 2. type如果没有在yaml写，是不能决定mock什么类型的数据。
 
 3. array结果数据，只有第一条是完整，其余只有一个属性结果。**可能是有bug**。==此问题已经修复执行命令`npm install https://github.com/SimonOsaka/swagger-mock-parser`==
-4. 涉及到数字的结果，会带有负号（-），不完美。==此问题已经修复执行命令`npm install https://github.com/SimonOsaka/swagger-mock-parser`==。***最小值为1***。
 
+4. 涉及到数字的结果，会带有负号（-），不完美。==此问题已经修复执行命令`npm install https://github.com/SimonOsaka/swagger-mock-parser`==。***最小值为1***。

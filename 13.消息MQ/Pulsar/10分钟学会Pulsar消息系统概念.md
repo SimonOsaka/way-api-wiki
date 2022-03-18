@@ -302,9 +302,4 @@ Pulsar有两个特性，让你可以覆盖上面的默认行为:
 由于篇幅有限，本篇文章只讲述Pulsar消息系统的基本概念，下篇文章重点讲解Pulsar的架构和客户端库使用教程。
 *参考文档(http://pulsar.apache.org/en/)*
 
-
-
-
-
 > 原文：[[Pulsar系列] 10分钟学会Pulsar消息系统概念](https://www.bbsmax.com/A/MAzAP6Med9/)
-

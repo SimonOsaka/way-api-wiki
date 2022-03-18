@@ -5,4 +5,3 @@
 ## 使用
 
 [Getting Started with Java in Visual Studio Code](https://code.visualstudio.com/docs/java/java-tutorial) 
-

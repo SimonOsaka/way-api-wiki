@@ -65,8 +65,6 @@ nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 
 本文结束！
 
-
-
 # 参考文献
 
 * [https本地自签名证书添加到信任证书访问 - 你不知道的浪漫 - 博客园 (cnblogs.com)](https://www.cnblogs.com/passedbylove/p/12054364.html)

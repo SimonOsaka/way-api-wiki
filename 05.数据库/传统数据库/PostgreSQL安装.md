@@ -23,11 +23,11 @@ postgresql-14-setup initdb
 打开`/var/lib/pgsql/14/data/postgresql.conf`，例如修改`地址`和`端口`，修改后重启
 
 ```properties
-#listen_addresses = 'localhost'		# what IP address(es) to listen on;
-					# comma-separated list of addresses;
-					# defaults to 'localhost'; use '*' for all
-					# (change requires restart)
-#port = 5432				# (change requires restart)
+#listen_addresses = 'localhost'        # what IP address(es) to listen on;
+                    # comma-separated list of addresses;
+                    # defaults to 'localhost'; use '*' for all
+                    # (change requires restart)
+#port = 5432                # (change requires restart)
 ```
 
 ## 适配客户端连接
@@ -41,7 +41,7 @@ postgresql-14-setup initdb
 local   all             all                                     trust
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            trust
-host    all             all             0.0.0.0/32            	trust
+host    all             all             0.0.0.0/32                trust
 # IPv6 local connections:
 host    all             all             ::1/128                 trust
 # Allow replication connections from localhost, by a user with the
@@ -67,7 +67,6 @@ host    all             all             ::1/128                 scram-sha-256
 local   replication     all                                     peer
 host    replication     all             127.0.0.1/32            scram-sha-256
 host    replication     all             ::1/128                 scram-sha-256
-
 ```
 
 ## 修改默认密码

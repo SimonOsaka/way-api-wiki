@@ -8,13 +8,9 @@
 4. 搜索`localhost`
 5. 点击`移除`
 
-
-
 #### 参考
 
 * [Safari Redirecting http to (non-existent) https](https://apple.stackexchange.com/questions/215077/safari-redirecting-http-to-non-existent-https)
-
-
 
 #### 学习
 

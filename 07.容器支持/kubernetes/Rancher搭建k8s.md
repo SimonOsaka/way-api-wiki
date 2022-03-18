@@ -34,27 +34,27 @@ services:
 ## 执行k8s安装的虚拟机配置
 
 * 关闭 selinux 
-
+  
   `sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config`
 
 * 关闭防火墙
-
+  
   `systemctl stop firewalld.service && systemctl disable firewalld.service`
 
 * 关闭swap
-
+  
   `sed -i '/swap/s/^/#/' /etc/fstab`
 
 * 时区
-
+  
   `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
 
 * 语言
-
+  
   `sudo echo 'LANG="en_US.UTF-8"' >> /etc/profile;source /etc/profile`
 
 * 性能优化
-
+  
   ```shell
   cat >> /etc/sysctl.conf<<EOF
   net.ipv4.ip_forward = 1
@@ -69,15 +69,13 @@ services:
   ```
 
 * 文件打开数
-
+  
   ```shell
   cat >> /etc/security/limits.conf <<EOF
   * soft nofile 65535
   * hard nofile 65536
   EOF
   ```
-
-  
 
 > 以上命令根据操作系统不同而不同
 

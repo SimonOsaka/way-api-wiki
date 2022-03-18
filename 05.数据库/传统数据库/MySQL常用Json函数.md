@@ -2,33 +2,33 @@
 
 官方文档：[JSON Functions](http://dev.mysql.com/doc/refman/5.7/en/json-functions.html)
 
-| Name                                                         | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [JSON_APPEND()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-append) | Append data to JSON document                                 |
-| [JSON_ARRAY()](http://dev.mysql.com/doc/refman/5.7/en/json-creation-functions.html#function_json-array) | Create JSON array                                            |
-| [JSON_ARRAY_APPEND()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-array-append) | Append data to JSON document                                 |
-| [JSON_ARRAY_INSERT()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-array-insert) | Insert into JSON array                                       |
-| [->](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-column-path) | Return value from JSON column after evaluating path; equivalent to JSON_EXTRACT(). |
-| [JSON_CONTAINS()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-contains) | Whether JSON document contains specific object at path       |
-| [JSON_CONTAINS_PATH()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-contains-path) | Whether JSON document contains any data at path              |
-| [JSON_DEPTH()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-depth) | Maximum depth of JSON document                               |
-| [JSON_EXTRACT()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-extract) | Return data from JSON document                               |
-| [->>](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path) | Return value from JSON column after evaluating path and unquoting the result; equivalent to JSON_UNQUOTE(JSON_EXTRACT()). |
-| [JSON_INSERT()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-insert) | Insert data into JSON document                               |
-| [JSON_KEYS()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-keys) | Array of keys from JSON document                             |
-| [JSON_LENGTH()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-length) | Number of elements in JSON document                          |
-| [JSON_MERGE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-merge) | Merge JSON documents                                         |
-| [JSON_OBJECT()](http://dev.mysql.com/doc/refman/5.7/en/json-creation-functions.html#function_json-object) | Create JSON object                                           |
-| [JSON_QUOTE()](http://dev.mysql.com/doc/refman/5.7/en/json-creation-functions.html#function_json-quote) | Quote JSON document                                          |
-| [JSON_REMOVE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-remove) | Remove data from JSON document                               |
-| [JSON_REPLACE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-replace) | Replace values in JSON document                              |
-| [JSON_SEARCH()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-search) | Path to value within JSON document                           |
-| [JSON_SET()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-set) | Insert data into JSON document                               |
-| [JSON_TYPE()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-type) | Type of JSON value                                           |
-| [JSON_UNQUOTE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-unquote) | Unquote JSON value                                           |
-| [JSON_VALID()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-valid) | Whether JSON value is valid                                  |
+| Name                                                                                                                      | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [JSON_APPEND()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-append)             | Append data to JSON document                                                                                              |
+| [JSON_ARRAY()](http://dev.mysql.com/doc/refman/5.7/en/json-creation-functions.html#function_json-array)                   | Create JSON array                                                                                                         |
+| [JSON_ARRAY_APPEND()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-array-append) | Append data to JSON document                                                                                              |
+| [JSON_ARRAY_INSERT()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-array-insert) | Insert into JSON array                                                                                                    |
+| [->](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-column-path)                         | Return value from JSON column after evaluating path; equivalent to JSON_EXTRACT().                                        |
+| [JSON_CONTAINS()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-contains)               | Whether JSON document contains specific object at path                                                                    |
+| [JSON_CONTAINS_PATH()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-contains-path)     | Whether JSON document contains any data at path                                                                           |
+| [JSON_DEPTH()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-depth)                  | Maximum depth of JSON document                                                                                            |
+| [JSON_EXTRACT()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-extract)                 | Return data from JSON document                                                                                            |
+| [->>](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path)                        | Return value from JSON column after evaluating path and unquoting the result; equivalent to JSON_UNQUOTE(JSON_EXTRACT()). |
+| [JSON_INSERT()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-insert)             | Insert data into JSON document                                                                                            |
+| [JSON_KEYS()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-keys)                       | Array of keys from JSON document                                                                                          |
+| [JSON_LENGTH()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-length)                | Number of elements in JSON document                                                                                       |
+| [JSON_MERGE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-merge)               | Merge JSON documents                                                                                                      |
+| [JSON_OBJECT()](http://dev.mysql.com/doc/refman/5.7/en/json-creation-functions.html#function_json-object)                 | Create JSON object                                                                                                        |
+| [JSON_QUOTE()](http://dev.mysql.com/doc/refman/5.7/en/json-creation-functions.html#function_json-quote)                   | Quote JSON document                                                                                                       |
+| [JSON_REMOVE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-remove)             | Remove data from JSON document                                                                                            |
+| [JSON_REPLACE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-replace)           | Replace values in JSON document                                                                                           |
+| [JSON_SEARCH()](http://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#function_json-search)                   | Path to value within JSON document                                                                                        |
+| [JSON_SET()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-set)                   | Insert data into JSON document                                                                                            |
+| [JSON_TYPE()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-type)                    | Type of JSON value                                                                                                        |
+| [JSON_UNQUOTE()](http://dev.mysql.com/doc/refman/5.7/en/json-modification-functions.html#function_json-unquote)           | Unquote JSON value                                                                                                        |
+| [JSON_VALID()](http://dev.mysql.com/doc/refman/5.7/en/json-attribute-functions.html#function_json-valid)                  | Whether JSON value is valid                                                                                               |
 
- 1. 概述
+1. 概述
 
 MySQL里的json分为json array和json object。 $表示整个json对象，在索引数据时用**下标**(对于json array，从0开始)或**键值**(对于json object，含有特殊字符的key要用"括起来，比如$."my name")。
 
@@ -99,8 +99,6 @@ mysql> SELECT JSON_OBJECT('id', 87, 'name', 'carrot');
 +-----------------------------------------+
 ```
 
- 
-
 3.1.3 JSON_QUOTE
 
 JSON_QUOTE(json_val)
@@ -133,15 +131,15 @@ mysql> select CONVERT('{"mail": "amy@gmail.com", "name": "Amy"}',JSON);
 +----------------------------------------------------------+
 | CONVERT('{"mail": "amy@gmail.com", "name": "Amy"}',JSON) |
 +----------------------------------------------------------+
-| {"mail": "amy@gmail.com", "name": "Amy"}       				   |
+| {"mail": "amy@gmail.com", "name": "Amy"}                          |
 +----------------------------------------------------------+
 ```
 
 　　
 
-## 3.2 查询函数　　
+## 3.2 查询函数
 
-###  3.2.1 JSON_CONTAINS
+### 3.2.1 JSON_CONTAINS
 
 JSON_CONTAINS(json_doc, val[, path])
 
@@ -154,32 +152,32 @@ mysql> SELECT JSON_CONTAINS(@j, @j2, '$.a');
 +-------------------------------+
 | JSON_CONTAINS(@j, @j2, '$.a') |
 +-------------------------------+
-|             							  1 |
+|                                           1 |
 +-------------------------------+
 mysql> SELECT JSON_CONTAINS(@j, @j2, '$.b');
 +-------------------------------+
 | JSON_CONTAINS(@j, @j2, '$.b') |
 +-------------------------------+
-|           							    0 |
+|                                           0 |
 +-------------------------------+ 
 mysql> SET @j2 = '{"d": 4}';
 mysql> SELECT JSON_CONTAINS(@j, @j2, '$.a');
 +-------------------------------+
 | JSON_CONTAINS(@j, @j2, '$.a') |
 +-------------------------------+
-|          							      0 |
+|                                            0 |
 +-------------------------------+
 mysql> SELECT JSON_CONTAINS(@j, @j2, '$.c');
 +-------------------------------+
 | JSON_CONTAINS(@j, @j2, '$.c') |
 +-------------------------------+
-|          							      1 |
+|                                            1 |
 +-------------------------------+
 ```
 
 　　
 
-###  3.2.2 JSON_CONTAINS_PATH
+### 3.2.2 JSON_CONTAINS_PATH
 
 JSON_CONTAINS_PATH(json_doc, one_or_all, path[, path] ...)
 
@@ -193,25 +191,25 @@ mysql> SELECT JSON_CONTAINS_PATH(@j, 'one', '$.a', '$.e');
 +---------------------------------------------+
 | JSON_CONTAINS_PATH(@j, 'one', '$.a', '$.e') |
 +---------------------------------------------+
-|                     										  1 |
+|                                                               1 |
 +---------------------------------------------+
 mysql> SELECT JSON_CONTAINS_PATH(@j, 'all', '$.a', '$.e');
 +---------------------------------------------+
 | JSON_CONTAINS_PATH(@j, 'all', '$.a', '$.e') |
 +---------------------------------------------+
-|                   										    0 |
+|                                                               0 |
 +---------------------------------------------+
 mysql> SELECT JSON_CONTAINS_PATH(@j, 'one', '$.c.d');
 +----------------------------------------+
 | JSON_CONTAINS_PATH(@j, 'one', '$.c.d') |
 +----------------------------------------+
-|                 									   1 |
+|                                                        1 |
 +----------------------------------------+
 mysql> SELECT JSON_CONTAINS_PATH(@j, 'one', '$.a.d');
 +----------------------------------------+
 | JSON_CONTAINS_PATH(@j, 'one', '$.a.d') |
 +----------------------------------------+
-|                										   0 |
+|                                                           0 |
 +----------------------------------------+
 ```
 
@@ -223,57 +221,53 @@ JSON_EXTRACT(json_doc, path[, path] ...)
 
 从json文档里抽取数据。如果有参数有NULL或path不存在，则返回NULL。如果抽取出多个path，则返回的数据封闭在一个json array里。
 
- 
-
 ```mysql
 mysql> SELECT JSON_EXTRACT('[10, 20, [30, 40]]', '$[1]');
 +--------------------------------------------+
 | JSON_EXTRACT('[10, 20, [30, 40]]', '$[1]') |
 +--------------------------------------------+
-| 20               										       |
+| 20                                                              |
 +--------------------------------------------+
 mysql> SELECT JSON_EXTRACT('[10, 20, [30, 40]]', '$[1]', '$[0]');
 +----------------------------------------------------+
 | JSON_EXTRACT('[10, 20, [30, 40]]', '$[1]', '$[0]') |
 +----------------------------------------------------+
-| [20, 10]                  										     |
+| [20, 10]                                                               |
 +----------------------------------------------------+
 mysql> SELECT JSON_EXTRACT('[10, 20, [30, 40]]', '$[2][*]');
 +-----------------------------------------------+
 | JSON_EXTRACT('[10, 20, [30, 40]]', '$[2][*]') |
 +-----------------------------------------------+
-| [30, 40]               										    |
+| [30, 40]                                                           |
 +-----------------------------------------------+
 ```
-
- 
 
 在MySQL 5.7.9+里可以用"**->**"替代。
 
 ```mysql
 mysql> SELECT c, JSON_EXTRACT(c, "$.id"), g    
-		 > FROM jemp   
-		 > WHERE JSON_EXTRACT(c, "$.id") > 1    
-		 > ORDER BY JSON_EXTRACT(c, "$.name");
+         > FROM jemp   
+         > WHERE JSON_EXTRACT(c, "$.id") > 1    
+         > ORDER BY JSON_EXTRACT(c, "$.name");
 +-------------------------------+-----------+------+
-| c          							      | c->"$.id" | g 	 |
+| c                                            | c->"$.id" | g      |
 +-------------------------------+-----------+------+
-| {"id": "3", "name": "Barney"} | "3"    		|  3 	 |
-| {"id": "4", "name": "Betty"}  | "4"    		|  4 	 |
-| {"id": "2", "name": "Wilma"}  | "2"    		|  2 	 |
+| {"id": "3", "name": "Barney"} | "3"            |  3      |
+| {"id": "4", "name": "Betty"}  | "4"            |  4      |
+| {"id": "2", "name": "Wilma"}  | "2"            |  2      |
 +-------------------------------+-----------+------+
 3 rows in set (0.00 sec) 
 
 mysql> SELECT c, c->"$.id", g    
-		 > FROM jemp   
-		 > WHERE c->"$.id" > 1    
-		 > ORDER BY c->"$.name";
+         > FROM jemp   
+         > WHERE c->"$.id" > 1    
+         > ORDER BY c->"$.name";
 +-------------------------------+-----------+------+
-| c               							| c->"$.id" | g  	 |
+| c                                           | c->"$.id" | g       |
 +-------------------------------+-----------+------+
-| {"id": "3", "name": "Barney"} | "3"    		|  3 	 |
-| {"id": "4", "name": "Betty"} 	| "4"    		|  4   |
-| {"id": "2", "name": "Wilma"} 	| "2"    		|  2 	 |
+| {"id": "3", "name": "Barney"} | "3"            |  3      |
+| {"id": "4", "name": "Betty"}     | "4"            |  4   |
+| {"id": "2", "name": "Wilma"}     | "2"            |  2      |
 +-------------------------------+-----------+------+
 3 rows in set (0.00 sec)
 ```
@@ -289,17 +283,17 @@ mysql> SELECT c, c->"$.id", g
 ```mysql
 mysql> SELECT * FROM jemp WHERE g > 2;
 +-------------------------------+------+
-| c              							  | g  	 |
+| c                                            | g       |
 +-------------------------------+------+
-| {"id": "3", "name": "Barney"} |  	 3 |
-| {"id": "4", "name": "Betty"} 	|  	 4 |
+| {"id": "3", "name": "Barney"} |       3 |
+| {"id": "4", "name": "Betty"}     |       4 |
 +-------------------------------+------+
 2 rows in set (0.01 sec) 
 
 mysql> SELECT c->'$.name' AS name    
-		->   FROM jemp WHERE g > 2;
+        ->   FROM jemp WHERE g > 2;
 +----------+
-| name   	 |
+| name        |
 +----------+
 | "Barney" |
 | "Betty"  |
@@ -307,7 +301,7 @@ mysql> SELECT c->'$.name' AS name
 2 rows in set (0.00 sec) 
 
 mysql> SELECT JSON_UNQUOTE(c->'$.name') AS name  
-		->   FROM jemp WHERE g > 2;
+        ->   FROM jemp WHERE g > 2;
 +--------+
 | name   |
 +--------+
@@ -317,7 +311,7 @@ mysql> SELECT JSON_UNQUOTE(c->'$.name') AS name
 2 rows in set (0.00 sec) 
 
 mysql> SELECT c->>'$.name' AS name  
-		->   FROM jemp WHERE g > 2;
+        ->   FROM jemp WHERE g > 2;
 +--------+
 | name   |
 +--------+
@@ -340,14 +334,14 @@ mysql> SELECT JSON_KEYS('{"a": 1, "b": {"c": 30}}');
 +---------------------------------------+
 | JSON_KEYS('{"a": 1, "b": {"c": 30}}') |
 +---------------------------------------+
-| ["a", "b"]            							  |
+| ["a", "b"]                                          |
 +---------------------------------------+
 
 mysql> SELECT JSON_KEYS('{"a": 1, "b": {"c": 30}}', '$.b');
 +----------------------------------------------+
 | JSON_KEYS('{"a": 1, "b": {"c": 30}}', '$.b') |
 +----------------------------------------------+
-| ["c"]                    										 |
+| ["c"]                                                             |
 +----------------------------------------------+
 ```
 
@@ -365,91 +359,89 @@ search_str：要查询的字符串。 可以用LIKE里的'%'或‘_’匹配。
 
 path：在指定path下查。
 
- 
-
 ```mysql
 mysql> SET @j = '["abc", [{"k": "10"}, "def"], {"x":"abc"}, {"y":"bcd"}]'; 
 mysql> SELECT JSON_SEARCH(@j, 'one', 'abc');
 +-------------------------------+
 | JSON_SEARCH(@j, 'one', 'abc') |
 +-------------------------------+
-| "$[0]"           						  |
+| "$[0]"                                     |
 +-------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', 'abc');
 +-------------------------------+
 | JSON_SEARCH(@j, 'all', 'abc') |
 +-------------------------------+
-| ["$[0]", "$[2].x"]     			  |
+| ["$[0]", "$[2].x"]                   |
 +-------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', 'ghi');
 +-------------------------------+
 | JSON_SEARCH(@j, 'all', 'ghi') |
 +-------------------------------+
-| NULL           							  |
+| NULL                                         |
 +-------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '10');
 +------------------------------+
 | JSON_SEARCH(@j, 'all', '10') |
 +------------------------------+
-| "$[1][0].k"        					 |
+| "$[1][0].k"                             |
 +------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '10', NULL, '$');
 +-----------------------------------------+
 | JSON_SEARCH(@j, 'all', '10', NULL, '$') |
 +-----------------------------------------+
-| "$[1][0].k"          							      |
+| "$[1][0].k"                                            |
 +-----------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '10', NULL, '$[*]');
 +--------------------------------------------+
 | JSON_SEARCH(@j, 'all', '10', NULL, '$[*]') |
 +--------------------------------------------+
-| "$[1][0].k"            								     |
+| "$[1][0].k"                                                 |
 +--------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '10', NULL, '$**.k');
 +---------------------------------------------+
 | JSON_SEARCH(@j, 'all', '10', NULL, '$**.k') |
 +---------------------------------------------+
-| "$[1][0].k"          								        |
+| "$[1][0].k"                                                  |
 +---------------------------------------------+ 
 mysql> SELECT JSON_SEARCH(@j, 'all', '10', NULL, '$[*][0].k');
 +-------------------------------------------------+
 | JSON_SEARCH(@j, 'all', '10', NULL, '$[*][0].k') |
 +-------------------------------------------------+
-| "$[1][0].k"            									        |
+| "$[1][0].k"                                                        |
 +-------------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '10', NULL, '$[1]');
 +--------------------------------------------+
 | JSON_SEARCH(@j, 'all', '10', NULL, '$[1]') |
 +--------------------------------------------+
-| "$[1][0].k"           								     |
+| "$[1][0].k"                                                |
 +--------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '10', NULL, '$[1][0]');
 +-----------------------------------------------+
 | JSON_SEARCH(@j, 'all', '10', NULL, '$[1][0]') |
 +-----------------------------------------------+
-| "$[1][0].k"             								      |
+| "$[1][0].k"                                                   |
 +-----------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', 'abc', NULL, '$[2]');
 +---------------------------------------------+
 | JSON_SEARCH(@j, 'all', 'abc', NULL, '$[2]') |
 +---------------------------------------------+
-| "$[2].x"            								        |
+| "$[2].x"                                                    |
 +---------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '%a%');
 +-------------------------------+
 | JSON_SEARCH(@j, 'all', '%a%') |
 +-------------------------------+
-| ["$[0]", "$[2].x"]   			    |
+| ["$[0]", "$[2].x"]                   |
 +-------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '%b%');
@@ -463,34 +455,34 @@ mysql> SELECT JSON_SEARCH(@j, 'all', '%b%', NULL, '$[0]');
 +---------------------------------------------+
 | JSON_SEARCH(@j, 'all', '%b%', NULL, '$[0]') |
 +---------------------------------------------+
-| "$[0]"                 										  |
+| "$[0]"                                                           |
 +---------------------------------------------+ 
 mysql> SELECT JSON_SEARCH(@j, 'all', '%b%', NULL, '$[2]');
 +---------------------------------------------+
 | JSON_SEARCH(@j, 'all', '%b%', NULL, '$[2]') |
 +---------------------------------------------+
-| "$[2].x"                 									  |
+| "$[2].x"                                                       |
 +---------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '%b%', NULL, '$[1]');
 +---------------------------------------------+
 | JSON_SEARCH(@j, 'all', '%b%', NULL, '$[1]') |
 +---------------------------------------------+
-| NULL                   										  |
+| NULL                                                             |
 +---------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '%b%', '', '$[1]');
 +-------------------------------------------+
 | JSON_SEARCH(@j, 'all', '%b%', '', '$[1]') |
 +-------------------------------------------+
-| NULL                  									  |
+| NULL                                                        |
 +-------------------------------------------+ 
 
 mysql> SELECT JSON_SEARCH(@j, 'all', '%b%', '', '$[3]');
 +-------------------------------------------+
 | JSON_SEARCH(@j, 'all', '%b%', '', '$[3]') |
 +-------------------------------------------+
-| "$[3].y"                 									|
+| "$[3].y"                                                     |
 +-------------------------------------------+
 ```
 
@@ -510,21 +502,21 @@ mysql> SELECT JSON_ARRAY_APPEND(@j, '$[1]', 1);
 +----------------------------------+
 | JSON_ARRAY_APPEND(@j, '$[1]', 1) |
 +----------------------------------+
-| ["a", ["b", "c", 1], "d"]   		 |
+| ["a", ["b", "c", 1], "d"]            |
 +----------------------------------+
 
 mysql> SELECT JSON_ARRAY_APPEND(@j, '$[0]', 2);
 +----------------------------------+
 | JSON_ARRAY_APPEND(@j, '$[0]', 2) |
 +----------------------------------+
-| [["a", 2], ["b", "c"], "d"]   	 |
+| [["a", 2], ["b", "c"], "d"]        |
 +----------------------------------+
 
 mysql> SELECT JSON_ARRAY_APPEND(@j, '$[1][0]', 3);
 +-------------------------------------+
 | JSON_ARRAY_APPEND(@j, '$[1][0]', 3) |
 +-------------------------------------+
-| ["a", [["b", 3], "c"], "d"]     		|
+| ["a", [["b", 3], "c"], "d"]             |
 +-------------------------------------+ 
 
 mysql> SET @j = '{"a": 1, "b": [2, 3], "c": 4}';
@@ -537,7 +529,7 @@ mysql> SELECT JSON_ARRAY_APPEND(@j, '$.b', 'x');
 
 mysql> SELECT JSON_ARRAY_APPEND(@j, '$.c', 'y');
 +--------------------------------------+
-| JSON_ARRAY_APPEND(@j, '$.c', 'y')  	 |
+| JSON_ARRAY_APPEND(@j, '$.c', 'y')       |
 +--------------------------------------+
 | {"a": 1, "b": [2, 3], "c": [4, "y"]} |
 +--------------------------------------+ 
@@ -547,7 +539,7 @@ mysql> SELECT JSON_ARRAY_APPEND(@j, '$', 'z');
 +---------------------------------+
 | JSON_ARRAY_APPEND(@j, '$', 'z') |
 +---------------------------------+
-| [{"a": 1}, "z"]        				  |
+| [{"a": 1}, "z"]                          |
 +---------------------------------+
 ```
 
@@ -572,28 +564,28 @@ mysql> SELECT JSON_ARRAY_INSERT(@j, '$[100]', 'x');
 +--------------------------------------+
 | JSON_ARRAY_INSERT(@j, '$[100]', 'x') |
 +--------------------------------------+
-| ["a", {"b": [1, 2]}, [3, 4], "x"]  	 |
+| ["a", {"b": [1, 2]}, [3, 4], "x"]       |
 +--------------------------------------+
 
 mysql> SELECT JSON_ARRAY_INSERT(@j, '$[1].b[0]', 'x');
 +-----------------------------------------+
 | JSON_ARRAY_INSERT(@j, '$[1].b[0]', 'x') |
 +-----------------------------------------+
-| ["a", {"b": ["x", 1, 2]}, [3, 4]]    		|
+| ["a", {"b": ["x", 1, 2]}, [3, 4]]            |
 +-----------------------------------------+
 
 mysql> SELECT JSON_ARRAY_INSERT(@j, '$[2][1]', 'y');
 +---------------------------------------+
 | JSON_ARRAY_INSERT(@j, '$[2][1]', 'y') |
 +---------------------------------------+
-| ["a", {"b": [1, 2]}, [3, "y", 4]]   	|
+| ["a", {"b": [1, 2]}, [3, "y", 4]]       |
 +---------------------------------------+
 
 mysql> SELECT JSON_ARRAY_INSERT(@j, '$[0]', 'x', '$[2][1]', 'y');
 +----------------------------------------------------+
 | JSON_ARRAY_INSERT(@j, '$[0]', 'x', '$[2][1]', 'y') |
 +----------------------------------------------------+
-| ["x", "a", {"b": [1, 2]}, [3, 4]]         				 |
+| ["x", "a", {"b": [1, 2]}, [3, 4]]                          |
 +----------------------------------------------------+
 ```
 
@@ -611,11 +603,9 @@ mysql> SELECT JSON_INSERT(@j, '$.a', 10, '$.c', '[true, false]');
 +----------------------------------------------------+
 | JSON_INSERT(@j, '$.a', 10, '$.c', '[true, false]') |
 +----------------------------------------------------+
-| {"a": 1, "b": [2, 3], "c": "[true, false]"}   		 |
+| {"a": 1, "b": [2, 3], "c": "[true, false]"}            |
 +----------------------------------------------------+
 ```
-
- 
 
 JSON_REPLACE(json_doc, path, val[, path, val] ...)
 
@@ -627,13 +617,9 @@ mysql> SELECT JSON_REPLACE(@j, '$.a', 10, '$.c', '[true, false]');
 +-----------------------------------------------------+
 | JSON_REPLACE(@j, '$.a', 10, '$.c', '[true, false]') |
 +-----------------------------------------------------+
-| {"a": 10, "b": [2, 3]}               								|
+| {"a": 10, "b": [2, 3]}                                               |
 +-----------------------------------------------------+
 ```
-
- 
-
- 
 
 JSON_SET(json_doc, path, val[, path, val] ...)
 
@@ -645,21 +631,21 @@ mysql> SELECT JSON_SET(@j, '$.a', 10, '$.c', '[true, false]');
 +-------------------------------------------------+
 | JSON_SET(@j, '$.a', 10, '$.c', '[true, false]') |
 +-------------------------------------------------+
-| {"a": 10, "b": [2, 3], "c": "[true, false]"}  	|
+| {"a": 10, "b": [2, 3], "c": "[true, false]"}      |
 +-------------------------------------------------+
 
 mysql> SELECT JSON_INSERT(@j, '$.a', 10, '$.c', '[true, false]');
 +----------------------------------------------------+
 | JSON_INSERT(@j, '$.a', 10, '$.c', '[true, false]') |
 +----------------------------------------------------+
-| {"a": 1, "b": [2, 3], "c": "[true, false]"}    		 |
+| {"a": 1, "b": [2, 3], "c": "[true, false]"}             |
 +----------------------------------------------------+
 
 mysql> SELECT JSON_REPLACE(@j, '$.a', 10, '$.c', '[true, false]');
 +-----------------------------------------------------+
 | JSON_REPLACE(@j, '$.a', 10, '$.c', '[true, false]') |
 +-----------------------------------------------------+
-| {"a": 10, "b": [2, 3]}               								|
+| {"a": 10, "b": [2, 3]}                                               |
 +-----------------------------------------------------+
 ```
 
@@ -680,28 +666,28 @@ mysql> SELECT JSON_MERGE('[1, 2]', '[true, false]');
 +---------------------------------------+
 | JSON_MERGE('[1, 2]', '[true, false]') |
 +---------------------------------------+
-| [1, 2, true, false]          					|
+| [1, 2, true, false]                              |
 +---------------------------------------+
 
 mysql> SELECT JSON_MERGE('{"name": "x"}', '{"id": 47}');
 +-------------------------------------------+
 | JSON_MERGE('{"name": "x"}', '{"id": 47}') |
 +-------------------------------------------+
-| {"id": 47, "name": "x"}          					|
+| {"id": 47, "name": "x"}                              |
 +-------------------------------------------+
 
 mysql> SELECT JSON_MERGE('1', 'true');
 +-------------------------+
 | JSON_MERGE('1', 'true') |
 +-------------------------+
-| [1, true]        				|
+| [1, true]                        |
 +-------------------------+
 
 mysql> SELECT JSON_MERGE('[1, 2]', '{"id": 47}');
 +------------------------------------+
 | JSON_MERGE('[1, 2]', '{"id": 47}') |
 +------------------------------------+
-| [1, 2, {"id": 47}]         				 |
+| [1, 2, {"id": 47}]                          |
 +------------------------------------+
 ```
 
@@ -718,7 +704,7 @@ mysql> SELECT JSON_REMOVE(@j, '$[1]');
 +-------------------------+
 | JSON_REMOVE(@j, '$[1]') |
 +-------------------------+
-| ["a", "d"]       				|
+| ["a", "d"]                       |
 +-------------------------+
 ```
 
@@ -734,21 +720,19 @@ JSON_UNQUOTE(val)
 mysql> SET @j = '"abc"';
 mysql> SELECT @j, JSON_UNQUOTE(@j);
 +-------+------------------+
-| @j  | JSON_UNQUOTE(@j) 	 |
+| @j  | JSON_UNQUOTE(@j)      |
 +-------+------------------+
-| "abc" | abc       			 |
+| "abc" | abc                    |
 +-------+------------------+
 
 mysql> SET @j = '[1, 2, 3]';
 mysql> SELECT @j, JSON_UNQUOTE(@j);
 +-----------+------------------+
-| @j    | JSON_UNQUOTE(@j) 		 |
+| @j    | JSON_UNQUOTE(@j)          |
 +-----------+------------------+
-| [1, 2, 3] | [1, 2, 3]    		 |
+| [1, 2, 3] | [1, 2, 3]             |
 +-----------+------------------+
 ```
-
- 
 
 ## 3.4 JSON特性查询
 
@@ -765,25 +749,23 @@ mysql> SELECT JSON_DEPTH('{}'), JSON_DEPTH('[]'), JSON_DEPTH('true');
 +------------------+------------------+--------------------+
 | JSON_DEPTH('{}') | JSON_DEPTH('[]') | JSON_DEPTH('true') |
 +------------------+------------------+--------------------+
-|    				     1 |      				  1 |       				   1 |
+|                         1 |                        1 |                          1 |
 +------------------+------------------+--------------------+
 
 mysql> SELECT JSON_DEPTH('[10, 20]'), JSON_DEPTH('[[], {}]');
 +------------------------+------------------------+
 | JSON_DEPTH('[10, 20]') | JSON_DEPTH('[[], {}]') |
 +------------------------+------------------------+
-|         					   2 |        					    2 |
+|                                2 |                                2 |
 +------------------------+------------------------+
 
 mysql> SELECT JSON_DEPTH('[10, {"a": 20}]');
 +-------------------------------+
 | JSON_DEPTH('[10, {"a": 20}]') |
 +-------------------------------+
-|            							    3 |
+|                                            3 |
 +-------------------------------+
 ```
-
- 
 
 ### 3.4.2 JSON_LENGTH
 
@@ -802,21 +784,21 @@ mysql> SELECT JSON_LENGTH('[1, 2, {"a": 3}]');
 +---------------------------------+
 | JSON_LENGTH('[1, 2, {"a": 3}]') |
 +---------------------------------+
-|            								    3 |
+|                                                3 |
 +---------------------------------+
 
 mysql> SELECT JSON_LENGTH('{"a": 1, "b": {"c": 30}}');
 +-----------------------------------------+
 | JSON_LENGTH('{"a": 1, "b": {"c": 30}}') |
 +-----------------------------------------+
-|                 									    2 |
+|                                                         2 |
 +-----------------------------------------+
 
 mysql> SELECT JSON_LENGTH('{"a": 1, "b": {"c": 30}}', '$.b');
 +------------------------------------------------+
 | JSON_LENGTH('{"a": 1, "b": {"c": 30}}', '$.b') |
 +------------------------------------------------+
-|                   											     1 |
+|                                                                    1 |
 +------------------------------------------------+
 ```
 
@@ -827,8 +809,6 @@ mysql> SELECT JSON_LENGTH('{"a": 1, "b": {"c": 30}}', '$.b');
 JSON_TYPE(json_val)
 
 获取json文档的具体类型。如果参数为NULL，则返回NULL。
-
- 
 
 ### 3.4.4 JSON_VALID
 
@@ -841,20 +821,17 @@ mysql> SELECT JSON_VALID('{"a": 1}');
 +------------------------+
 | JSON_VALID('{"a": 1}') |
 +------------------------+
-|        						   1 |
+|                                   1 |
 +------------------------+
 
 mysql> SELECT JSON_VALID('hello'), JSON_VALID('"hello"');
 +---------------------+-----------------------+
 | JSON_VALID('hello') | JSON_VALID('"hello"') |
 +---------------------+-----------------------+
-|      					    0 |         					  1 |
+|                              0 |                               1 |
 +---------------------+-----------------------+
 ```
 
 　　
 
-
-
 原文：[MySQL常用Json函数](https://www.cnblogs.com/waterystone/p/5626098.html)
-

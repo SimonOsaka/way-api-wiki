@@ -9,4 +9,3 @@ sudo xcode-select -switch /Library/Developer/CommandLineTools/
 # Change the path if you installed Xcode somewhere else.
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 ```
-

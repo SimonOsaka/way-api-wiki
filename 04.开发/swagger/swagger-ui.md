@@ -79,8 +79,6 @@ app.listen(3000, function () {
 编辑好swagger文件并切导出 swagger.json 文档，把 swagger.json 放到 node_app/public 目录下
 在浏览器上方URL中改为/static/test.json，点击Explore刷新
 
-
-
 或修改public/index.html
 
 ```js
@@ -97,4 +95,3 @@ url = "/static/swagger.json",
 **以上只是一个通俗易懂的例子，看懂就行。**
 
 ==最后建议使用官方提供的docker==
-

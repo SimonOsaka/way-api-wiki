@@ -4,7 +4,7 @@
 package com.fh;
 
 public class Student {
-    
+
     private String age;
     private Integer sex;
     public String getAge() {
@@ -27,7 +27,7 @@ public class Student {
 package com.fh;
 
 public class Demo {
-    
+
     private String name;
     private String age;
     private Integer sex;
@@ -54,8 +54,8 @@ public class Demo {
         this.age = age;
         this.sex = sex;
     }
-    
-    
+
+
 
 }
 ```
@@ -70,7 +70,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Test {
-    
+
     @org.junit.Test
     public void test() {
          List<Student> list = new ArrayList<>();  
@@ -98,9 +98,9 @@ public class Test {
 //         moreSort(demos);
 //         morePour(demos);
          groupByAge(demos);
-         
+
     }
-    
+
     /**
      * 数据打印
      * @param demos
@@ -113,7 +113,7 @@ public class Test {
         });*/
         return demos;
     }
-    
+
     /**
      * 打印性别为0的数据
      * @param demos
@@ -124,7 +124,7 @@ public class Test {
             System.out.println("\n"+item.getAge()+":"+item.getSex());
         });
     }
-    
+
     /**
      * 过滤年龄大于12的信息
      * @param demos
@@ -135,7 +135,7 @@ public class Test {
             System.out.println(demo.getAge()+":"+demo.getSex());
         });
     }
-    
+
     /**
      * 数据排序
      * @param demos
@@ -146,7 +146,7 @@ public class Test {
             System.out.println(demo.getAge());
         });
     }
-    
+
     /**
      * 倒叙
      * @param demos
@@ -158,7 +158,7 @@ public class Test {
             System.out.println(demo.getAge());
         });
     }
-    
+
     /**
      * 倒叙2
      * @param demos
@@ -171,7 +171,7 @@ public class Test {
             System.out.println(demo.getAge());
         });
     }
-    
+
     /**
      * 多条件排序--正序
      * @param demos
@@ -182,7 +182,7 @@ public class Test {
             System.out.println(demo.getSex()+":"+demo.getAge());
         });
     }
-    
+
     /**
      * 多条件倒叙
      * @param demos
@@ -229,7 +229,7 @@ public class Test {
                 return true;
             }
         }).collect(Collectors.toList());
-        
+
         collect.forEach(demo ->{
             System.out.println(demo.getAge()+":"+demo.getSex());
         });
@@ -254,7 +254,7 @@ public class Test {
         Entrys item3 = new Entrys();
         item3.setOne(1);
         item3.setTwo(4);
-        
+
         Entrys item4 = new Entrys();
         item4.setOne(2);
         item4.setTwo(1);
@@ -267,7 +267,7 @@ public class Test {
         Entrys item7 = new Entrys();
         item7.setOne(2);
         item7.setTwo(4);
-        
+
         Entrys item8 = new Entrys();
         item8.setOne(3);
         item8.setTwo(1);
@@ -280,8 +280,8 @@ public class Test {
         Entrys item11 = new Entrys();
         item11.setOne(4);
         item11.setTwo(4);
-        
-        
+
+
         list.add(item1);
         list.add(item2);
         list.add(item3);
@@ -297,11 +297,11 @@ public class Test {
         list.forEach(demo ->{
             System.out.println(demo.getOne()+":"+demo.getTwo());
         });
-        
+
     }
-    
-    
-    
+
+
+
     @Test
     public void testDic() {
         List<Models> list = new ArrayList<>();
@@ -330,20 +330,20 @@ public class Test {
         model4.setAge("25");
         model4.setSemi_fid("xxxcccqqqbbb");
         model4.setTid("111111");
-        
+
         Models model5 = new Models();
         model5.setName("hao");
         model5.setAge("23");
         model5.setSemi_fid("xxxcccqqqbbb");
         model5.setTid("111111");
-        
+
         list.add(model);
         list.add(model1);
         list.add(model2);
         list.add(model3);
         list.add(model4);
         list.add(model5);
-        
+
         //顺序不变
         List<Models> collect = list.stream().distinct().collect(Collectors.toList());
         collect.forEach(demo ->{
@@ -366,20 +366,20 @@ public class Test {
                                         )
                                 ), ArrayList::new)
                 );
-        
+
         collect.forEach(demo ->{
             System.out.println(demo.getName()+":"+demo.getAge()+":"+demo.getSemi_fid()+":"+demo.getTid());
         });*/
 
     }
-    
+
 
 }
 
 class Entrys{
-    
+
     private int one;
-    
+
     private int two;
 
     public int getOne() {
@@ -397,8 +397,6 @@ class Entrys{
     public void setTwo(int two) {
         this.two = two;
     }
-    
-    
 ```
 
 ```java
@@ -407,11 +405,11 @@ package com.voole.forerunner;
 public class Models {
 
     private String name;
-    
+
     private String semi_fid;
-    
+
     private String tid;
-    
+
     private String age;
 
     public String getName() {
@@ -464,12 +462,12 @@ public class Models {
             return false;
         }
     }
-    
-    
 
 
-    
-    
+
+
+
+
 
 }
 ```
@@ -500,7 +498,7 @@ public class Learning01 {
         sort7(list);
         sort8(list);
     }
-    
+
     public void sort7(List<String> list) {
         Collections.sort(list, new Comparator<String>() {
 
@@ -508,7 +506,7 @@ public class Learning01 {
             public int compare(String o1, String o2) {
                 return o1.compareTo(o2);
             }
-            
+
         });
         for (String string : list) {
             System.out.println(string);
@@ -520,7 +518,7 @@ public class Learning01 {
             System.out.println(demo);
         });
     }
-    
+
     /**
      * lambda表达式学习--闭包
      */
@@ -532,32 +530,32 @@ public class Learning01 {
         MathOperation mul = (a,b) ->{return a * b;};
         MathOperation div = (a,b) -> a/b;
         System.out.println(instance.operator(1, 2, add));
-        
-        
+
+
         GreetingService service = (message) ->
         System.out.println("hello "+message);
-        
+
         service.sayMessgae("hahah");
     }
-    
+
     public int operator(int a,int b,MathOperation mathOperation) {
         return mathOperation.operation(a, b);
     }
-    
+
     interface MathOperation {
         int operation(int a,int b);
     }
-    
+
     interface GreetingService {
         void sayMessgae(String message);
     }
-    
+
 
     @Test
     public void test22() {
         Person person = new Man();
         person.print();
-        
+
     }
 
 }
@@ -597,13 +595,13 @@ public class Learning02 {
             System.out.println(demo);
         });
     }
-    
+
     @Test
     public void test02() {
         Random random = new Random();
         random.ints().limit(1).forEach(System.out::println);
     }
-    
+
     @Test
     public void test03() {
         List<Integer> asList = Arrays.asList(2,2,3,4,5,6,7);
@@ -616,21 +614,21 @@ public class Learning02 {
             System.out.println(demo);
         });
     }
-    
+
     @Test
     public void test04() {
         List<String> list = Arrays.asList("ha","niin","hhh","jj","ll");
         String string = list.parallelStream().findFirst().get();
         System.out.println(string);
     }
-    
+
     @Test
     public void test05() {
         List<String> list = Arrays.asList("ha","niin","hhh","jj","ll");
         String string = list.parallelStream().filter(demo ->!demo.isEmpty()).collect(Collectors.joining(","));
         System.out.println(string);
     }
-    
+
     @Test
     public void test06() {
         List<Integer> list = Arrays.asList(2,3,4,5,6,6,7,8,8,8,8,8);
@@ -641,7 +639,7 @@ public class Learning02 {
         System.out.println("min:"+summer.getMin());
         System.out.println("sum:"+summer.getSum());
     }
-    
+
     @Test
     public void test07() {
         LocalDateTime currentTime = LocalDateTime.now();
@@ -652,7 +650,7 @@ public class Learning02 {
         int day = currentTime.getDayOfMonth();
         int second = currentTime.getSecond();
 //        System.out.println("月:"+month+"天:"+day+"秒:"+second);
-        
+
         LocalDateTime withYear = currentTime.withDayOfMonth(10).withYear(2018);
 //        System.out.println("withDayOfMonth:"+withYear);
         /*2018-07-20T15:18:33.054
@@ -662,26 +660,26 @@ public class Learning02 {
         withDayOfMonth:2018-07-10T15:18:33.054*/
         LocalDate of = LocalDate.of(2018, Month.DECEMBER, 20);
         System.out.println(of);
-        
+
         LocalTime times = LocalTime.of(12, 12);
         System.out.println(times);
-        
+
         LocalTime parse = LocalTime.parse("15:22:22");
         System.out.println(parse);
     }
-    
+
     @Test
     public void test08() {
         ZonedDateTime parse = ZonedDateTime.parse("2015-12-03T10:15:30+05:30[Asia/Shanghai]");
         System.out.println(parse);
-        
+
         ZoneId of = ZoneId.of("Europe/Paris");
         System.out.println(of);
-        
+
         ZoneId systemDefault = ZoneId.systemDefault();
         System.out.println(systemDefault);
     }
-    
+
     @Test
     public void test09() {
         try {
@@ -691,10 +689,10 @@ public class Learning02 {
             //解码
             byte[] decode = Base64.getDecoder().decode(encodeToString);
             System.out.println(new String(decode,"utf-8"));
-            
+
             String urlEncoder = Base64.getUrlEncoder().encodeToString("http://baidu.com".getBytes("utf-8"));
             System.out.println(urlEncoder);
-            
+
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < 20; i++) {
                 builder.append(UUID.randomUUID().toString());
@@ -750,4 +748,3 @@ private Map<String,Object> megerListMap(List<Map<String,Object>> listsMap){
         return map;
 }
 ```
-

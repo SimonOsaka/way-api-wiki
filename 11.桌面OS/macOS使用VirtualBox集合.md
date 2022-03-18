@@ -33,4 +33,3 @@
 ### 强制关机（拔电源）
 
 `VBoxManage controlvm "Rockylinux8.4" poweroff`
-

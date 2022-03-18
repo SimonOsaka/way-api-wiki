@@ -188,8 +188,6 @@ spring server端源码的位置：swagger-codegen/modules/swagger-codegen/src/ma
 打开文件就能看到ResponseEntity，但是修改的时候一定要**注意**别改错了。
 最后自己写的小程序调用一下就可以了。说简单有点简单说难挺难的，yaml文件特别难写，建议在swagger-editor上编写，可以在网页上弄，最好还是下载到本地。
 
- 
-
 下面的东西就没用了，仅仅记录一下。
 
 ```shell
@@ -326,7 +324,5 @@ CONFIG OPTIONS
 ```
 
 server端的说明：https://github.com/swagger-api/swagger-codegen/wiki/Server-stub-generator-HOWTO
-
-
 
 本文来源：https://www.cnblogs.com/badboyf/p/6519997.html

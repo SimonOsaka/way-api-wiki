@@ -1,14 +1,12 @@
 [原文：高性能 Nginx HTTPS 调优 - 如何为 HTTPS 提速 30%](https://kalasearch.cn/blog/high-performance-nginx-tls-tuning/)
 
 # 高性能 Nginx HTTPS 调优 - 如何为 HTTPS 提速 30%
+
 ![让 Nginx 飞起来](./nginx优化ssl速度.assets/high-performance-nginx-header.png)
 
 让 Nginx 飞起来
 
-
-
 ## 为什么要优化 Ngin HTTPS 延迟
-
 
 Nginx 常作为最常见的服务器，常被用作负载均衡 (Load Balancer)、反向代理 (Reverse Proxy)，以及网关 (Gateway) 等等。一个配置得当的 Nginx 服务器单机应该可以[期望承受住 50K 到 80K 左右](https://github.com/denji/nginx-tuning)每秒的请求，同时将 CPU 负载在可控范围内。
 
@@ -19,7 +17,6 @@ Nginx 常作为最常见的服务器，常被用作负载均衡 (Load Balancer)�
 照例，本文的 Nginx 设置文件放置于 github，欢迎直接使用: [高性能 Nginx HTTPS 调优](https://github.com/Kalasearch/high-performance-nginx-tls-tuning)
 
 ## TLS 握手和延迟
-
 
 很多时候开发者会认为：如果不是绝对在意性能，那么了解底层和更细节的优化没有必要。这句话在很多时候是恰当的，因为很多时候复杂的底层逻辑必须包起来，才能让更高层的应用开发复杂度可控。比如说，如果你就只需要开发一个 APP 或者网站，可能并没有必要关注汇编细节，关注编译器如何优化你的代码——毕竟在苹果或者安卓上很多优化在底层就做好了。
 
@@ -35,8 +32,6 @@ Nginx 常作为最常见的服务器，常被用作负载均衡 (Load Balancer)�
 
 在传输数据前数据已经跑了好几个来回 roundtrip
 
-
-
 可以看到，在你的用户拿到他需要的数据前，底层的数据包就已经在用户和你的服务器之间跑了 3 个来回。
 
 假设每次来回需要 28 毫秒的话，用户已经等了 224 毫秒之后才开始接收数据。
@@ -47,7 +42,6 @@ Nginx 常作为最常见的服务器，常被用作负载均衡 (Load Balancer)�
 
 ## Nginx 中的 TLS 设置
 
-
 那么在 Nginx 设置中，怎样调整参数会减少延迟呢？
 
 ### 开启 HTTP/2
@@ -56,13 +50,9 @@ HTTP/2 标准是从 Google 的 SPDY 上进行的改进，比起 HTTP 1.1 提升�
 
 如果你想自己看一下 HTTP 1.1 和 HTTP 2.0 的速度差异，可以试一下：https://www.httpvshttps.com/。我的网络测试下来 HTTP/2 比 HTTP 1.1 快了 66%。
 
-
-
 ![HTTP 1.1 与 HTTP 2.0 速度对比](./nginx优化ssl速度.assets/HTTP2-speed-compare.png)
 
 HTTP 1.1 与 HTTP 2.0 速度对比
-
-
 
 在 Nginx 中开启 HTTP 2.0 非常简单，只需要增加一个 http2 标志即可
 
@@ -79,13 +69,9 @@ listen 443 ssl http2;
 
 在 Chrome 中打开开发者工具，点开 `Protocol` 之后在所有的请求中都可以看到请求用的协议了。如果 `protocol` 这列的值是 `h2` 的话，那么用的就是 HTTP 2 了
 
-
-
 ![用 Chrome 确认 HTTP/2 已经打开](./nginx优化ssl速度.assets/chrome-check-http2.png)
 
 用 Chrome 确认 HTTP/2 已经打开
-
-
 
 当然另一个办法是直接用 `curl` 如果返回的 status 前有 `HTTP/2` 的话自然也就是 HTTP/2 开启了。
 
@@ -189,13 +175,9 @@ ssl_session_timeout 4h;
 
 简化一下，每个搜索请求需要经历的延迟有
 
-
-
 ![卡拉搜索的端对端延迟图示](./nginx优化ssl速度.assets/kala-diagram.png)
 
 卡拉搜索的端对端延迟图示
-
-
 
 总延迟 = 用户请求到达服务器(T1) + 反代处理(Nginx T2) + 数据中心延迟(T3) + 服务器处理 (卡拉引擎 T4) + 用户请求返回(T3+T1)
 
@@ -209,13 +191,9 @@ Nginx 在这里作为反向代理，处理一些安全、流量控制和 TLS 的
 
 在下图展示的 [Grafana 仪表盘](https://kalasearch.cn/blog/grafana-with-prometheus-tutorial)中，我们看到除了几个时不时的慢查询，搜索的 95% 服务器处理延迟小于 20 毫秒。对比同样的数据集上 benchmark 的 Elastic Search 引擎的 P95 搜索延迟则在 200 毫秒左右，所以排除了引擎速度慢的可能。
 
-
-
 ![Search Grafana](./nginx优化ssl速度.assets/search-p95.png)
 
 Search Grafana
-
-
 
 而在阿里云监控中，我们设置了从全国各地向卡拉服务器发送搜索请求。我们终于发现 SSL 处理时间时常会超过 300 毫秒，也就是说在 T2 这一步，光处理 TLS 握手之类的事情，Nginx 已经用掉了我们所有的请求时间预算。
 
@@ -223,13 +201,9 @@ Search Grafana
 
 我们按照上文中的步骤对 Nginx 设置进行了调整，并将步骤总结出来写了这篇文章。在调整了 Nginx TLS 的设置后，SSL 时间从平均的 140ms 降低到了 110ms 左右（全国所有省份联通和移动测试点），同时苹果设备上首次访问慢的问题也消失了。
 
-
-
 ![调整后延迟](./nginx优化ssl速度.assets/latency-after-tuning.png)
 
 调整后延迟
-
-
 
 在调整过后，全国范围内测试的搜索延迟降低到了 150 毫秒左右。
 

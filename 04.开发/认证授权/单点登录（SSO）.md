@@ -25,7 +25,7 @@
 
 * Cookie是不能跨域的，我们Cookie的domain属性是sso.a.com，在给app1.a.com和app2.a.com发送请求是带不上的。
 * sso、app1和app2是不同的应用，它们的session存在自己的应用内，是不共享的。
-![4e31c204eea22ee07154df928a5ff5350da03d7a](../uploads/6aa26e28e6dce9c268d6e2c5e7b35f65/4e31c204eea22ee07154df928a5ff5350da03d7a.png)
+  ![4e31c204eea22ee07154df928a5ff5350da03d7a](../uploads/6aa26e28e6dce9c268d6e2c5e7b35f65/4e31c204eea22ee07154df928a5ff5350da03d7a.png)
 
 那么我们如何解决这两个问题呢？针对第一个问题，sso登录以后，可以将Cookie的域设置为顶域，即.a.com，这样所有子域的系统都可以访问到顶域的Cookie。**我们在设置Cookie时，只能设置顶域和自己的域，不能设置其他的域。比如：我们不能在自己的系统中给baidu.com的域设置Cookie。**
 

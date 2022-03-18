@@ -9,7 +9,7 @@ mac抓包
 1. 在mac终端执行命令`brew install mitmproxy`进行安装
 
 2. 执行命令`mitmdump —version`看到如下输出，代表安装成功
-
+   
    ```shell
    Mitmproxy: 4.0.4
    Python:    3.7.3
@@ -20,7 +20,7 @@ mac抓包
 3. 执行命令`mitmproxy`启动，默认端口为8080，如果要自定义端口`-p 端口号`
 
 4. 启动完成，在要抓包的设备中设置网关内容
-
+   
    ```shell
    ip: 127.0.0.1 # 改为启动mitmproxy的机器ip
    port: 8080 # 默认。如果自定义就改为自定义端口

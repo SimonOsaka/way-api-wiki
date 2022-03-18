@@ -84,8 +84,6 @@ CD可对应多个英文名称，持续交付`Continuous Delivery`和持续部署
 
 8、https://blog.csdn.net/CrankZ/article/details/81545439
 
-
-
 转载自：《[DevOps漫谈之一：DevOps、CI、CD都是什么鬼？](https://blog.jjonline.cn/linux/238.html)》
 
 ---
@@ -139,7 +137,5 @@ To deploy (from the French deployer) is "to spread out or arrange strategically.
 6、https://gblogs.cisco.com/ch-tech/how-to-devops-cloud-agnostic-cicd-pipeline-process-steps/
 
 7、http://www.zhujinhe.com/archives/31
-
-
 
 转载自：《[DevOps漫谈之二：PHP项目中应用CI/CD的思考](https://blog.jjonline.cn/linux/239.html)》

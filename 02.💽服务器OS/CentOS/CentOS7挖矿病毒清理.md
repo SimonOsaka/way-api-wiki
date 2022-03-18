@@ -16,11 +16,15 @@
 > 这种病毒较为常见，网上搜索有专门的解决方案和清理脚本。我只记录几个关键的命令和路径。
 
 * `lsattr`查看当前文件夹内的程序权限。**目的是找出有--------------i-------------的病毒文件**
+
 * `chattr -i 程序名`解除-----------i-------------权限
+
 * `/etc/rc.d/init.d`此目录有两个挖矿病毒`watchdogs`和`kthrotlds`，删除它
+
 * `rm /usr/local/lib/libioset.so`删除此文件
+
 * `cd /tmp`并`rm -rf *`删除/tmp内的文件
 
 * 查看`/var/spool/cron/root`是否有定时任务来启动挖矿脚本
-
+  
   参考：https://www.secpulse.com/archives/99420.html
