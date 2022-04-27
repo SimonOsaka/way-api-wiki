@@ -48,4 +48,25 @@
   
   `sudo pacman -S woff2-cascadia-code`
 
+### 安装JDK
 
+```shell
+> paru -S amazon-corretto-17
+
+> archlinux-java status
+Available Java environments: 
+    java-17-amazon-corretto
+No Java environment set as default
+
+> sudo archlinux-java set java-17-amazon-corretto
+> archlinux-java status
+Available Java environments: 
+    java-17-amazon-corretto (default)
+
+> java -version
+Openjdk version "17.0.3" 2022-04-19 LTS
+OpenJDK Runtime Environment Corretto-17.0.3.6.1  (build 17.0.3+6-LTS)
+OpenJDK 64-Bit Server VM Corretto-17.0.3.6.1  (build 17.0.3+6-LTS, mixed mode, sharing)
+```
+
+可以安装多个jdk，然后进行切换。
