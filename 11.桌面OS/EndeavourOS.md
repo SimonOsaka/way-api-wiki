@@ -4,13 +4,9 @@
 
 [EndeavourOS &#8211; A terminal-centric distro with a vibrant and friendly community at its core](https://endeavouros.com)
 
-
-
 ## 安装
 
 选择`offline`安装，默认安装的桌面环境是`xfce`。
-
-
 
 ## 使用
 
@@ -41,5 +37,15 @@
 - 官方 [Arch Linux - Package Search](https://archlinux.org/packages)
 
 - AUR [AUR (zh_CN) - 软件包 (archlinux.org)](https://aur.archlinux.org/packages)
+
+### 安装字体
+
+- CascadiaCode，[搜索cascadia](https://archlinux.org/packages/?q=cascadia)
+  
+  `sudo pacman -S ttf-cascadia-code`
+  
+  `sudo pacman -S otf-cascadia-code`
+  
+  `sudo pacman -S woff2-cascadia-code`
 
 
