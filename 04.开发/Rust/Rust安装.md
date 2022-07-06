@@ -45,6 +45,16 @@ git-fetch-with-cli = true
 rustup update stable
 ```
 
+## 安装Sccache
+```shell
+cargo install sccache
+
+vi ~/.cargo/config
+# 配置已安装sccache路径
+[build]
+rustc-wrapper = "/path/to/.cargo/bin/sccache"
+```
+
 ## 使用Rust in vscode
 
 1. 安装rust-analyzer插件
@@ -107,6 +117,30 @@ replace-with = 'tuna'
 
 [source.tuna]
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+```
+
+## cargo开发协作
+### 代码检查
+```shell
+rustup component add clippy
+cargo clippy
+```
+
+### 更新crates库
+```shell
+cargo update
+```
+
+### 过期第三方库检查
+```shell
+cargo install -f cargo-outdated
+cargo outdated
+```
+
+### 第三方库安全审计
+```shell
+cargo install -f cargo-audit
+cargo audit
 ```
 
 参考：[https://www.qttc.net/529-rust-cross-compile-mac-to-linux.html](https://www.qttc.net/529-rust-cross-compile-mac-to-linux.html)
