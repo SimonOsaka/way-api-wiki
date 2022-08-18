@@ -70,3 +70,19 @@ OpenJDK 64-Bit Server VM Corretto-17.0.3.6.1  (build 17.0.3+6-LTS, mixed mode, s
 ```
 
 可以安装多个jdk，然后进行切换。
+
+### 安装xfce dock
+点击链接 [xfce4-docklike-plugin](https://aur.archlinux.org/packages/xfce4-docklike-plugin)
+```shell
+# 安装
+sudo pacman -S xfce4-docklike-plugin
+```
+安装完成后，如何使用
+1. 右键任务栏 -> 面板 -> 面板首选项
+2. 点击`+`，新建一个面板
+3. 切换至新建的面板，点击`项目`tab，点击`添加`
+4. 搜索`dock`，然后点击搜索结果`Docklike Taskbar`，点击添加
+5. 将新建的面板拖到最底部，然后锁定
+6. 打开一个应用，dock栏会出现图标，如果想一直使用，右键图标，点击`pinned to Dock`
+7. 配置`Docklike Taskbar`，在第四步已经添加的项目`Docklike Taskbar`上双击即可出现配置选项。
+8. 如果不想在任务栏和dock栏同时出现应用图标，右键任务栏 -> 面板 -> 面板首选项 -> `项目`tab，移除`窗口按钮`，添加`分隔符`并设置透明
