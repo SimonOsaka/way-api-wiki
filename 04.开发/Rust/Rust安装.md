@@ -94,7 +94,7 @@ CC_x86_64_unknown_linux_musl="x86_64-linux-musl-gcc" cargo build --release --tar
 ```
 
 ##### 提示：openssl err的错误
-
+MacOS
 ```shell
 # 安装openssl 1.1
 brew install openssl@1.1
@@ -108,6 +108,12 @@ export OPENSSL_DIR="/usr/local/opt/openssl@1.1" # 根据实际目录填写，这
 source ~/.bash_profile
 ```
 
+RockyLinux 9
+```shell
+# https://docs.rs/openssl/latest/openssl/
+sudo dnf install pkg-config openssl-devel
+```
+
 ##### 提示ring-x.xx.xx编译问题，没有找到文件或目录
 
 ```shell
@@ -117,6 +123,16 @@ replace-with = 'tuna'
 
 [source.tuna]
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+```
+
+##### 提示linker `cc` not found
+```shell
+sudo dnf install gcc
+```
+
+##### 提示Unable to find libclang
+```shell
+sudo dnf install clang
 ```
 
 ## cargo开发协作
