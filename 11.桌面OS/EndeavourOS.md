@@ -86,3 +86,7 @@ sudo pacman -S xfce4-docklike-plugin
 6. 打开一个应用，dock栏会出现图标，如果想一直使用，右键图标，点击`pinned to Dock`
 7. 配置`Docklike Taskbar`，在第四步已经添加的项目`Docklike Taskbar`上双击即可出现配置选项。
 8. 如果不想在任务栏和dock栏同时出现应用图标，右键任务栏 -> 面板 -> 面板首选项 -> `项目`tab，移除`窗口按钮`，添加`分隔符`并设置透明
+
+## 常见问题
+### 1. “签名是勉强信任的”，”无效或已损坏的软件包 (PGP 签名)“，”签名是未知信任的“
+**解决方案**：[[FAQ] Issues with “signature is marginal trust”, “signature is unknown trust”, or “invalid or corrupted package”](https://forum.endeavouros.com/t/faq-issues-with-signature-is-marginal-trust-signature-is-unknown-trust-or-invalid-or-corrupted-package/6756)
