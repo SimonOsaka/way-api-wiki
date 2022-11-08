@@ -41,3 +41,9 @@ brew install hdf5
 // 加入localhost
 exceptionDomain: "localhost"
 ```
+4. `Macos 10.15`执行`cargo tauri build`编译出错error: failed to run custom build command for `mac-notification-sys v0.5.6`
+	网络有几种答案
+	- 删除`/Library/Developer/CommandLineTools`后，再重装一次
+	- 安装`brew install llvm` 
+	- 安装`xcode`。✅奏效，但体积太过庞大，寻求其它解决方式
+	最终方案：删除`/Library/Developer/CommandLineTools/SDKs`目录内的`MacOSX10.15.sdk`。✅问题解决

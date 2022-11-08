@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "42a3cb9fa6e3d103",
+        "id": "15a9e693118a468e",
         "type": "tabs",
         "children": [
           {
-            "id": "9c433f76b7137416",
+            "id": "5cffa06a3a329386",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01.🔥基础支持/⭐️总结，先读此文.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01.🔥基础支持/⭐️总结，先读此文.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01.🔥基础支持/⭐️总结，先读此文.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "01.🔥基础支持/⭐️总结，先读此文.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -137,12 +129,16 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "9c433f76b7137416",
+  "active": "5cffa06a3a329386",
   "lastOpenFiles": [
-    "2022-10-19.md",
-    "01.🔥基础支持/⭐️总结，先读此文.md"
+    "04.开发/Rust/Tauri大全.md",
+    "11.桌面OS/macOS不安装XCode进行开发.md",
+    "11.桌面OS/macOS使用VirtualBox集合.md",
+    "11.桌面OS/macOS 10.15（Catalina）找不到头文件的解决方法.md",
+    "11.桌面OS/macOS显示Read-only file system的对应方法.md",
+    "04.开发/Rust/Rust安装.md",
+    "11.桌面OS/## MacOS 15（Catalina）下找不到头文件的解决方法.md",
+    "01.🔥基础支持/⭐️总结，先读此文.md",
+    "2022-10-19.md"
   ]
 }
