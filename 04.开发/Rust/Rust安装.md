@@ -135,6 +135,13 @@ sudo dnf install gcc
 sudo dnf install clang
 ```
 
+##### 提示you may need to install the FindBin module
+```shell
+dnf install perl
+# or
+dnf install perl-FindBin
+```
+
 ## cargo开发协作
 ### 代码检查
 ```shell
