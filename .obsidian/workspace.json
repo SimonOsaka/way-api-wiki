@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "95f363369fbf131c",
+        "id": "315750f8c7140f9c",
         "type": "tabs",
         "children": [
           {
-            "id": "0b2c6fecefa737b8",
+            "id": "79ea366dd9dc134b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02.💽服务器OS/RockyLinux/RockyLinux安装.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "553fe99676c44472",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04.开发/Rust/Rust安装.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04.开发/Rust/Rust安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04.开发/Rust/Rust安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "04.开发/Rust/Rust安装.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -150,17 +129,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "553fe99676c44472",
+  "active": "79ea366dd9dc134b",
   "lastOpenFiles": [
+    "04.开发/Rust/Rust安装.md",
+    "04.开发/Rust/Tauri大全.md",
+    "02.💽服务器OS/RockyLinux/RockyLinux安装.md",
     "04.开发/Rust/Rust常用库.md",
     "04.开发/Rust/Rust常用语法总结.md",
     "04.开发/Rust/Rust使用VSCode开发.md",
     "04.开发/Rust/Rust我不懂但我会java.md",
     "04.开发/Rust/Rust学习知识.md",
     "04.开发/Rust/Rust引用库.md",
-    "02.💽服务器OS/RockyLinux/sshd无法连接.md",
-    "02.💽服务器OS/RockyLinux/RockyLinux安装.md",
-    "02.💽服务器OS/linux基础.md",
-    "01.🔥基础支持/⭐️总结，先读此文.md"
+    "02.💽服务器OS/RockyLinux/sshd无法连接.md"
   ]
 }

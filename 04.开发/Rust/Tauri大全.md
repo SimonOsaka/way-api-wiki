@@ -10,11 +10,16 @@ cargo install tauri-cli
 ```
 
 ### Tauri开发
+[先决条件]([Prerequisites | Tauri Apps](https://tauri.app/v1/guides/getting-started/prerequisites))，必读
 [开发安装](https://tauri.app/v1/guides/getting-started/setup/)
 
 ## Tauri打包安装
 ### 执行打包
 ```shell
+# 执行之前务必读'先决条件'的内容
+# 打包过程缓慢且漫长
+# 还会遇到某些请求无法访问，如果是在执行build_appimage.sh阶段，那么进入target/release/bundle/appimage目录执行'./build_appimage.sh'查看错误提示信息
+# 编译过程中出现错误，可参考本文'错误参考'，也可以参考[[Rust安装#编译过程中发生错误]]部分
 cargo tauri build
 ```
 
