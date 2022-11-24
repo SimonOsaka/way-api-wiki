@@ -10,8 +10,8 @@ cargo install tauri-cli
 ```
 
 ### Tauri开发
-[先决条件]([Prerequisites | Tauri Apps](https://tauri.app/v1/guides/getting-started/prerequisites))，必读
-[开发安装](https://tauri.app/v1/guides/getting-started/setup/)
+- [先决条件](https://tauri.app/v1/guides/getting-started/prerequisites)，必读
+- [开发安装](https://tauri.app/v1/guides/getting-started/setup/)
 
 ## Tauri打包安装
 ### 执行打包

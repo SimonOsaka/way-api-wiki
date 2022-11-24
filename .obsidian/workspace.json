@@ -11,8 +11,12 @@
             "id": "79ea366dd9dc134b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "04.开发/Rust/Tauri大全.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "04.开发/Rust/Tauri大全.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "04.开发/Rust/Tauri大全.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "04.开发/Rust/Tauri大全.md"
+              }
             }
           }
         ],
@@ -131,15 +139,15 @@
   },
   "active": "79ea366dd9dc134b",
   "lastOpenFiles": [
-    "04.开发/Rust/Rust安装.md",
+    "[Prerequisites.md",
     "04.开发/Rust/Tauri大全.md",
+    "04.开发/Rust/Rust安装.md",
     "02.💽服务器OS/RockyLinux/RockyLinux安装.md",
     "04.开发/Rust/Rust常用库.md",
     "04.开发/Rust/Rust常用语法总结.md",
     "04.开发/Rust/Rust使用VSCode开发.md",
     "04.开发/Rust/Rust我不懂但我会java.md",
     "04.开发/Rust/Rust学习知识.md",
-    "04.开发/Rust/Rust引用库.md",
-    "02.💽服务器OS/RockyLinux/sshd无法连接.md"
+    "04.开发/Rust/Rust引用库.md"
   ]
 }
