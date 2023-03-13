@@ -15,6 +15,7 @@ cargo install tauri-cli
 
 ## Tauri打包安装
 ### 执行打包
+
 ```shell
 # 执行之前务必读'先决条件'的内容
 # 打包过程缓慢且漫长
