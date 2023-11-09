@@ -2,7 +2,7 @@
 archlinux能不能作为服务器，装了再说
 
 ### 安装之前
-1. 下载`archinstall`
+1. 启动ISO，进入命令行后查看是否有`archinstall`，如果没有就去github下载`archinstall`
 2. 执行
 ```
 archinstall
