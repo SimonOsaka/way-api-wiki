@@ -7,9 +7,13 @@
 ### 安装
 1. 启动ISO
 2. 安装选项第一项
-3. 进入命令行后，查看`archinstall`是否存在？
-    - 不存在，去官方github下载
-    - 存在，直接执行
+3. 修改`mirrorlist`，增加一个距离近的mirror
+```shell
+rm -rf /etc/pacman.d/mirrorlist
+vim /etc/pacman.d/mirrorlist
+:wq
+```
+3. 执行`archinstall`
 4. `archinstall`提供安装选项，根据选项配置要安装系统参数，也提供安装桌面环境的选项（KDE\Xfce\...）
 5. 一切配置完成后，执行`install`
 
